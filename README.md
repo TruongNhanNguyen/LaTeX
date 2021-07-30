@@ -1,6 +1,6 @@
 # LaTeX TikZ
 
-## This repository is used to create LaTeX document include
+## This repository is used to create LaTeX document, includes
 
 1. Basic LaTeX documents
 
@@ -9,4 +9,4 @@
         - Assignments
         - Group Projects's of math, physics, and IT
   
-    - $TikZ$ pictures and profiles
+    - TikZ pictures and profiles
