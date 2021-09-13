@@ -1,7 +1,7 @@
-INFO:  latexindent.exe version 3.10.1, 2021-07-23, a script to indent .tex files
+INFO:  latexindent.exe version 3.11, 2021-07-31, a script to indent .tex files
        latexindent.exe lives here: E:/texlive/2021/bin/win32/
-       Sat Jul 31 21:03:38 2021
-       Filename: e:/LaTeX/Tikz/LinearRegression/__latexindent_temp.tex
+       Mon Sep 13 20:28:06 2021
+       Filename: e:/LaTeX/Documents/CalculusAssignments/FirstAssignment/__latexindent_temp.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
