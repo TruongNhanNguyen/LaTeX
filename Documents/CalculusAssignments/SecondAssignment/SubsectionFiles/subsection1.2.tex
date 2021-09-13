@@ -1,0 +1,237 @@
+\subsection{Các dạng vô định.}
+            \begin{itemize}
+                \item Dạng $\infty -\infty$
+                    \begin{myprob}
+                        \recprob{Bài 1.2.1} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                            \lim\limits_{x\to\infty}\left(\sqrt{x^2+2x+1}-\sqrt{x^2+x+2}\right)
+                        \end{equation*}
+                    \end{myprob}
+                    
+                    \loigiai
+                    
+                    Ta xác định giới hạn cần tìm có dạng $\infty-\infty$. Bằng phương pháp nhân lượng liên hiệp $\left(\sqrt{x^2+2x+1}+\sqrt{x^2+x+2}\right)$, ta thu được kết quả:
+                    $$\lim\limits_{x\to\infty}\dfrac{(\sqrt{x^2+2x+1}-\sqrt{x^2+x+2}).(\sqrt{x^2+2x+1}+\sqrt{x^2+x+2})}{(\sqrt{x^2+2x+1}+\sqrt{x^2+x+2})}=\lim\limits_{x\to\infty}\dfrac{x-1}{\sqrt{x^2+2x+1}+\sqrt{x^2+x+2}}=0$$
+                    \qed
+                    
+                     
+                    \begin{myprob}
+                        \recprob{Bài 1.2.2} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0}\left(\dfrac{1}{\sin x}-\dfrac{1}{x}\right)
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Ta quy đồng biểu thức lấy giới hạn:  $ \lim\limits_{x\to 0}\left(\dfrac{1}{\sin x}-\dfrac{1}{x}\right)=\lim\limits_{x\to 0}\dfrac{x-\sin{x}}{x\sin{x}}$ có dạng $\dfrac{0}{0}$.\\
+            Đến đây, ta sử dụng \textbf{đại lượng vô cùng bé tương đương} của $\sin{x} $ là $x$ ($x\to 0$)  để làm gọn mẫu thức, sau đó áp dụng quy tắc \textbf{L'Hospital}:
+            $$\lim\limits_{x\to 0}\dfrac{x-\sin{x}}{x\sin{x}}\stackrel{\sin x \sim x}{=}\lim\limits_{x\to 0}\dfrac{x-\sin{x}}{x^2}\stackrel{(L'Hospital)}{=}\lim\limits_{x\to 0}\dfrac{1-\cos{x}}{2x}\stackrel{(L'Hospital)}{=}\lim\limits_{x\to 0}\dfrac{\sin{x}}{2}=0$$
+            \qed
+            
+        
+            
+            
+                \item Dạng $\dfrac{0}{0}$
+                    \begin{myprob}
+                        \recprob{Bài 1.2.3} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0}\left(\dfrac{1}{x^2}-\dfrac{1}{\sin^2x}\right)
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Qui đồng mẫu biểu thức lấy giới hạn ta được:$$ \lim\limits_{x\to 0}\left(\dfrac{1}{x^2}-\dfrac{1}{\sin^2x}\right)= \lim\limits_{x\to 0}\left(\dfrac{\sin^2x-x^2}{x^2.\sin^2x}\right)$$
+            
+            Áp dụng quy tắc \textbf{Vô cùng bé tương đương} $\sin^2{x}\sim x^2 (x\to 0)$: $$\lim\limits_{x\to 0}\left(\dfrac{\sin^2x-x^2}{x^2.\sin^2x}\right)=\lim\limits_{x\to 0}\left(\dfrac{\sin^2x-x^2}{x^4}\right)$$ 
+            
+            Đến đây ta sử dụng \textbf{quy tắc L'Hospital}: $$\lim\limits_{x\to 0}\left(\dfrac{\sin^2x-x^2}{x^4}\right)=\lim\limits_{x\to 0}\left(\dfrac{\sin 2x-2x}{4x^3}\right)=\lim\limits_{x\to 0}\left(\dfrac{2\cos2x-2}{12x}\right)=\lim\limits_{x\to 0}\left(\dfrac{-4\sin2x}{12}\right)=\dfrac{0}{12}=0$$
+             \qed
+             
+                    \begin{myprob}
+                        \recprob{Bài 1.2.4} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0}\dfrac{e^{2x^2}-\cos{x}}{4x\sin{3x}}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Sử dụng các \textbf{Vô cùng bé tương đương}:
+            \begin{align*}
+                e^{2x^2} &\sim  1+2x^2 (x\to 0)\\
+                \cos{x} &\sim  1-\dfrac{x^2}{2} (x\to 0)\\
+                \sin{3x} &\sim x (x\to 0)
+            \end{align*}
+            
+            Giới hạn cần tính tương đương:  $$\lim\limits_{x\to 0}\dfrac{e^{2x^2}-\cos{x}}{4x\sin{3x}}=\lim\limits_{x\to 0}\dfrac{1+2x^2-\left(1-\dfrac{x^2}{2}\right)}{4x.3x} =\dfrac{\dfrac{5x^2}{4}}{12x^2}=\dfrac{5}{48}$$ 
+            \qed
+            
+                    \begin{myprob}
+                        \recprob{Bài 1.2.5} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0}\dfrac{\ln{(\cos{3x})}+2x^{10}\tan{3x}}{\ln{(1-3x\sin{4x})}+x^9}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Sử dụng các \textbf{Vô cùng bé tương đương sau}:
+            \begin{align*}
+                \ln{\cos{(3x)}}=\ln{(1+(-1+\cos{(3x)})}&\sim (-1+\cos{(3x)})\sim -\dfrac{9x^2}{2} (x\to 0)\\
+                \ln{(1-3x\sin{(4x)})}&\sim -3x\sin{(4x)}\sim  -12x^2 (x\to 0)\\
+                \tan(3x)&\sim 3x (x\to 0)
+            \end{align*}
+            
+            Do đó: $$ \lim\limits_{x\to 0}\dfrac{\ln{(\cos{3x})}+2x^{10}\tan{3x}}{\ln{(1-3x\sin{4x})}+x^9}=\lim\limits_{x\to 0}\dfrac{\dfrac{-9x^2}{2}+6x^{11}}{-12x^2+x^9}$$
+            
+            Ở tử và mẫu ta lấy các \textbf{vô cùng bé tương đương} bậc nhỏ nhất: $$\lim\limits_{x\to}\dfrac{\ln{(\cos{3x})}+2x^{10}\tan{3x}}{\ln{(1-3x\sin{4x})}+x^9}=\lim\limits\dfrac{\dfrac{-9x^2}{2}+6x^{11}}{-12x^2+x^9}=\lim\limits_{x\to 0}\dfrac{-9x^2}{-24x^2}=\dfrac{3}{8}$$
+            \qed
+            
+                    \begin{myprob}
+                        \recprob{Bài 1.2.6} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0} \dfrac{\sqrt{\cos(4x)}-1}{\ln(1-2x\sin x)}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Biến đổi biểu thức lấy giới hạn ta được: $$  \lim\limits_{x\to 0} \dfrac{\sqrt{\cos(4x)}-1}{\ln(1-2x\sin x)} = \lim\limits_{x\to 0} \dfrac{\cos(4x)-1}{\ln(1-2x\sin x).(\sqrt{\cos{(4x)}}+1)}$$
+            
+            Áp dụng các \textbf{vô cùng bé tương đương} sau:
+              \begin{align*}
+                 1-\cos(4x) & \sim \dfrac{(4x)^2}{2}=8x^2 (x\to 0)\\
+                 \ln(1-2x\sin x) & \sim -2x\sin(x) \sim -2x^2 (x\to 0)
+             \end{align*}
+             
+             Do vậy:  $$ \lim\limits_{x\to 0} \dfrac{\cos(4x)-1}{\ln(1-2x\sin x).(\sqrt{\cos{(4x)}}+1)} = \lim\limits_{x\to 0} \dfrac{-8x^2}{-2x^2.\left(\sqrt{1-8x^2}+1\right)} = \lim\limits_{x\to 0}\dfrac{4}{\sqrt{1-8x^2}+1}=2 $$
+             
+            \qed
+             \begin{myprob}
+                        \recprob{Bài 1.2.7} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0}\dfrac{\sin{\sqrt{1+x^3}}-\sin{1}}{\sqrt[5]{1-2x\ln(\cos{x})}-1}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Sử dụng \textbf{ các vô cùng bé tương đương} để biến đổi và rút gọn các biểu thức ở tử và mẫu:
+               \begin{itemize}
+                   \item  Ở mẫu thức: 
+                       \begin{align*}
+                            \sqrt[5]{1-2x\ln(\cos x)}-1 & \sim -\dfrac{2}{5}x\ln(\cos x) = -\dfrac{2}{5}\ln(1+(\cos x -1)) \sim -\dfrac{2}{5}x(\cos x-1)\; (x\to 0)\\
+                                   & \sim -\dfrac{2}{5}x\cdot -\dfrac{x^2}{2}=\dfrac{1}{5}x^3
+                       \end{align*}
+                   \item Ở tử thức:
+                        \begin{align*}
+                            \sin(\sqrt{1+x^3})-\sin 1 &= 2\cos\dfrac{\sqrt{1+x^3}+1}{2}\cdot \sin \dfrac{\sqrt{1+x^3}-1}{2}\\
+                            \sqrt{1+x^3}-1 = (1+x^3)^{\frac{1}{2}} - 1 & \sim \dfrac{1}{2}x^3 (x\to 0)\\
+                            2\cos\dfrac{\sqrt{1+x^3}+1}{2}\cdot \sin \dfrac{\sqrt{1+x^3}-1}{2}& \sim 2\cos 1.\dfrac{\sqrt{1+x^3}-1}{2}\sim 2\cos 1.\dfrac{\dfrac{1}{2}x^3}{2}=\dfrac{1}{2}\cos 1.x^3 (x\to 0)\\
+                        \end{align*}
+               \end{itemize}
+               
+               Do đó: $$ \lim\limits_{x\to 0}\dfrac{\sin{\sqrt{1+x^3}}-\sin{1}}{\sqrt[5]{1-2x\ln(\cos{x})}-1} = \dfrac{\dfrac{1}{2}\cos 1.x^3}{\dfrac{1}{5}x^3}=\dfrac{5}{2}\cos 1 $$
+               
+               \qed
+               
+                
+                \item Dạng $\dfrac{\infty}{\infty}$
+                     
+                      \begin{myprob}
+                        \recprob{Bài 1.2.8} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 3}\left[\sin(x-3)\tan\left(\dfrac{\pi}{6}\right)\right]
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Giới hạn trên có dạng $0.\infty$, ta sẽ chuyển về dạng $\dfrac{\infty}{\infty}$ và áp dụng \textbf{L'Hospital} cho việc tính giới hạn: 
+            $$ \lim\limits_{x\to 3}\left[\sin(x-3)\tan\left(\dfrac{\pi}{6}\right)\right] =  \lim\limits_{x\to 3}\dfrac{\sin(x-3)}{\cot\left(\dfrac{\pi x}{6}\right)} \stackrel{L'Hospital}{=} \lim\limits_{x\to 3}\dfrac{\cos(x-3)}{-\dfrac{\pi}{6}\left[1+\cot^2\left(\dfrac{\pi x}{6}\right)\right]} = \dfrac{1}{-\dfrac{\pi}{6}.1}=-\dfrac{6}{\pi}$$
+            \qed
+                
+                \item Dạng $0\cdot\infty$
+                    
+                    \begin{myprob}
+                        \recprob{Bài 1.2.9} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0^+}x\ln x
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Sử dụng quy tắc \textbf{L'Hospital} , ta được:
+            $$  \lim\limits_{x\to 0^+}x\ln x = \lim\limits_{x\to 0^+} \dfrac{\ln x}{\dfrac{1}{x}} \stackrel{L'Hospital}{=}  \lim\limits_{x\to 0^+} \dfrac{\dfrac{1}{x}}{-\dfrac{1}{x^2}} = \lim\limits_{x\to 0^+} (-x) = 0 $$
+            \qed
+                \item Dạng $0^0$
+                
+                    \begin{myprob}
+                        \recprob{Bài 1.2.10} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 0^+}x^x
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Ta có thể tính được nhanh giới hạn trên bằng cách tận dụng kết quả của \recprob{Bài1.2.10 } như một bổ đề:
+            $$   \lim\limits_{x\to 0^+}x^x = \lim\limits_{x\to 0^+} e^{x\ln x} = e^{\lim\limits_{x\to 0^+}x\ln x} = e^0=1 $$
+            \qed
+                \item Dạng $1^\infty$
+                
+                Để giải quyết dạng này ta cần sử dụng đến các giớ hạn đặc biệt sau:
+                \begin{equation*}
+                    \lim\limits_{x\to\infty}\left(1+\dfrac{1}{x}\right)^x=e, \qquad 
+                    \lim\limits_{x\to 0} (1+x)^{\dfrac{1}{x}}=e,\qquad
+                    \lim\limits_{x\to\infty}\left(1+\dfrac{a}{x}\right)^x=e^a
+                \end{equation*}
+                    
+                    \begin{myprob}
+                        \recprob{Bài 1.2.11} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to +\infty}\left(\dfrac{3x+4}{3x-9}\right)^{2x+7}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Thực hiện một số biến đổi trên $\lim$ như sau:  
+            $$ \lim\limits_{x\to +\infty}\left(\dfrac{3x+4}{3x-9}\right)^{2x+7} =  \lim\limits_{x\to +\infty}\left[\left( 1+\dfrac{13}{3x-9} \right)^{3x-9}\right]^{\dfrac{2x+7}{3x-9}} $$
+            
+            Do: \begin{align*}
+                 \lim\limits_{x\to +\infty}\left( 1+\dfrac{13}{3x-9} \right)^{3x-9}&=e^{13}\\
+                 \lim\limits_{x\to +\infty}\dfrac{2x+7}{3x-9}&=\dfrac{2}{3}
+            \end{align*}
+            
+            Nên: $$  \lim\limits_{x\to +\infty}\left(\dfrac{3x+4}{3x-9}\right)^{2x+7} =e^{\frac{26}{3}} $$
+        \qed
+                    \begin{myprob}
+                        \recprob{Bài 1.2.12} Tìm giới hạn sau:\\
+                        \begin{equation*}
+                           \lim\limits_{x\to 1}\left(\tan{\dfrac{\pi x}{4}}\right)^{\tan{\frac{\pi x}{2}}}
+                        \end{equation*}
+                    \end{myprob}
+            
+            \loigiai
+            
+            Giả sử $u, v $ là hai hàm số theo biến $x$, khi đó:
+             $$   \lim\limits_{x\to x_0}u^v =  \lim\limits_{x\to x_0}e^k  $$.
+             
+             Trong đó:  $k=\lim\limits_{x\to x_0}v\ln u$.
+             
+             Trong trường hợp này thì $k=\lim\limits_{x\to 1}\left[\tan\left(\dfrac{\pi x}{2}\right).\ln\tan\left(\dfrac{\pi x}{4}\right)\right]$
+             
+             Áp dụng \textbf{vô cùng bé tương đương }: $$ \ln\tan\dfrac{\pi x}{4} = \ln\left[1+\left(\tan\dfrac{\pi x}{4}-1\right)\right]\sim \tan\dfrac{\pi x}{4}-1  ( x\to 1)$$
+             
+             Đặt $\tan\dfrac{\pi x}{4}=t$ với $\lim\limits_{x\to 1}t=1$
+             
+             Từ công thức $\tan2\alpha=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$, ta viết lại được:
+             $$  k= \lim\limits_{t\to 1} \dfrac{(t-1)2t}{1-t^2} = \lim\limits_{t\to 1} \dfrac{2t^2-2t}{-t^2+1} \stackrel{L'Hospital}{=}   \lim\limits_{t\to 1}\dfrac{4t-2}{-2t}=-1$$
+             
+             Vậy $$ \lim\limits_{x\to 1}\left(\tan{\dfrac{\pi x}{4}}\right)^{\tan{\frac{\pi x}{2}}} = e^k =e^{-1}=\dfrac{1}{e} $$
+            \qed    
+            \end{itemize}

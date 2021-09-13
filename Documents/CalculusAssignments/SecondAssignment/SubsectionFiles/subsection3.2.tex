@@ -1,0 +1,361 @@
+\subsection{Tích phân suy rộng}
+\subsubsection{Tích phân suy rộng loại 1.}
+\textbf{Xét sựu hội tụ của các tích phân sau:}
+
+\begin{myprob}
+     \recprob{Bài 3.2.1}  $$\int\limits_{1}^{+\infty}\dfrac{\cos^2x}{3+4x^4}\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Theo bài toán $\forall x\geqslant 1$, ta luôn có bất đẳng thức sau:
+$$ \dfrac{\cos^2x}{3+4x^4} \leqslant \dfrac{1}{3+4x^4}\leqslant\dfrac{1}{4x^4}\leqslant\dfrac{1}{x^4} $$
+
+  Tích phân $I=\displaystyle\int\limits_{1}^{+\infty}\dfrac{\mathrm{d}x}{x^4}$ là tích phân \textit{Riemann} có  $\alpha=4>1$ nên hội tụ.
+     
+     Do đó, tích phân: $$ \int\limits_{1}^{+\infty}\dfrac{\cos^2x}{3+4x^4}\mathrm{d}x $$ cũng hội tụ.
+     \qed
+
+
+ \begin{myprob}
+     \recprob{Bài 3.2.2} $$\int\limits_{1}^{+\infty}\dfrac{3x^4+x^2}{7x^9+x^3+2}\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Khi $x\to\infty$ thì các biểu thức ở tử và mẫu trở thành các vô cùng lớn. Ta áp dụng $\textbf{Vô cùng lớn tương đương}$:
+$$\dfrac{3x^4+x^2}{7x^9+x^3+2}\sim\dfrac{3x^4}{7x^9}=\dfrac{3}{7x^5}$$.
+
+Tích phân $\displaystyle\int\limits_{1}^{+\infty}\dfrac{3}{7x^5}\mathrm{d}x=\lim\limits_{x\to\infty}\dfrac{-3}{28x^4}+\dfrac{3}{28}=\dfrac{3}{28}$ nên hội tụ.
+
+Do vậy, tích phân $$\int\limits_{1}^{+\infty}\dfrac{3x^4+x^2}{7x^9+x^3+2}\mathrm{d}x$$ cụng hội tụ.
+\qed
+
+
+
+
+
+ \begin{myprob}
+     \recprob{Bài 3.2.3} $$\int\limits_{1}^{+\infty}\sin^2\left(\dfrac{2x^3+x+3}{8x^5+4x+1}\right)\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Ta có $$\lim\limits_{x\to\infty}\dfrac{2x^3+x+3}{8x^5+4x+1}=0$$.
+
+Áp dụng \textbf{vô cùng bé tương đương} ta được: $$\sin^2\left(\dfrac{2x^3+x+3}{8x^5+4x+1}\right)\sim \left(\dfrac{2x^3+x+3}{8x^5+4x+1}\right )^2  \qquad (x\to\infty)$$
+
+Áp dụng \textbf{vô cùng lớn tương đương}:
+$$ \left(\dfrac{2x^3+x+3}{8x^5+4x+1}\right )^2\sim \left(\dfrac{2x^3}{8x^5}\right )^2 =\dfrac{1}{16x^4} $$
+
+Tích phân $\displaystyle\int\limits_{1}^{+\infty}\dfrac{\mathrm{d}x}{16x^4}=\lim\limits_{x\to\infty}\dfrac{-1}{48x^3}+\dfrac{1}{48}=\dfrac{1}{48}$  nên hội tụ.
+
+Do đó, tích phân $$\int\limits_{1}^{+\infty}\sin^2\left(\dfrac{2x^3+x+3}{8x^5+4x+1}\right)\mathrm{d}x $$ hội tụ.
+\qed
+
+
+
+ \begin{myprob}
+     \recprob{Bài 3.2.3} $$\int\limits_{1}^{+\infty} \ln^3\left(\dfrac{2x^2+3x+5}{2x^2+8x+1}\right)\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Ta có: $$ \lim\limits_{x\to\infty}\ln^3\left(\dfrac{2x^2+3x+5}{2x^2+8x+1}\right)=0$$
+
+Áp dụng \textbf{vô cùng bé tương đương} ta được: $$\ln^3\left[1+\left(\dfrac{2x^2+3x+5}{2x^2+8x+1}-1\right)\right]\sim \left(\dfrac{2x^2+3x+5}{2x^2+8x+1}- 1 \right)^3 = \left(\dfrac{4-5x}{x^2+8x+1}\right)^3\qquad (x\to\infty)$$
+
+Áp dụng \textbf{vô cùng lớn tương đương}: $$\dfrac{4-5x}{x^2+8x+1}\sim \dfrac{-5x}{x^2}=\dfrac{-5}{x}\qquad (x\to\infty) $$
+
+Ta có tích phân $\displaystyle\int\limits_{1}^{+\infty}\left(\dfrac{-5}{x}\right)^3\mathrm{d}x=\lim\limits_{x\to\infty}\dfrac{125}{3x^2}-\dfrac{125}{3}=\dfrac{-125}{3}$ nên hội tụ.  
+
+Do đó, $\displaystyle\int\limits_{1}^{+\infty} \ln^3\left(\dfrac{2x^2+3x+5}{2x^2+8x+1}\right)\mathrm{d}x $  tích phân cũng hội tụ.
+\qed
+
+
+
+ \begin{myprob}
+     \recprob{Bài 3.2.4} $$\int\limits_{1}^{+\infty} \left[1-\cos\left(\dfrac{3x^4+2}{8x^7+4x^2+3}\right)\right]\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Ta có: $$  \lim\limits_{x\to\infty} \dfrac{3x^4+2}{8x^7+4x^2+3}=0 $$
+
+Áp dụng \textbf{vô cùng bé tương đương} ta được:
+$$ \left[1-\cos\left(\dfrac{3x^4+2}{8x^7+4x^2+3}\right)\right]\sim\dfrac{1}{2} \left(\dfrac{3x^4+2}{8x^7+4x^2+3}\right)^2 \qquad (x\to\infty)$$
+
+Áp dụng \textbf{vô cùng lớn tương đương}:
+$$  \left(\dfrac{3x^4+2}{8x^7+4x^2+3}\right)^2\sim\left(\dfrac{3x^4}{8x^7}\right)^2 = \dfrac{9}{64x^6} \qquad (x\to\infty)$$
+
+Ta có tích phân $\displaystyle\int\limits_{1}^\infty\dfrac{9}{64x^6}\mathrm{d}x=\lim\limits_{x\to\infty}\dfrac{-9}{320x^5}+\dfrac{9}{320}=\dfrac{9}{320}$ hội tụ.
+
+Nên tích phân $\displaystyle\int\limits_{1}^{+\infty} \left[1-\cos\left(\dfrac{3x^4+2}{8x^7+4x^2+3}\right)\right]\mathrm{d}x $ cũng hội tụ.
+
+
+\qed
+
+ \begin{myprob}
+     \recprob{Bài 3.2.5} $$\int\limits_{1}^{+\infty} \dfrac{x\sqrt{x}+3}{2+4x+5x^3}\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Theo \textbf{vô cùng lớn tương đương} khi ($x\to\infty)$ thì:
+$$ \dfrac{x\sqrt{x}+3}{2+4x+5x^3}\sim \dfrac{x\sqrt{x}}{5x^3}=\dfrac{1}{5x^\frac{3}{2}}$$
+
+Ta có tích phân $\displaystyle\int\dfrac{1}{5x^\frac{3}{2}}\mathrm{d}x=\dfrac{1}{5}\displaystyle\int\dfrac{1}{x^\frac{3}{2}}\mathrm{d}x$, do tích phân $\displaystyle\int\dfrac{1}{x^\frac{3}{2}}\mathrm{d}x$ là tích phân \textit{Riemann} có $\alpha=\dfrac{3}{2}>1$ nên hội tụ, suy ra tích phân $\displaystyle\int\dfrac{1}{5x^\frac{3}{2}}\mathrm{d}x$ hội tụ.
+
+Do đó: $\displaystyle\int\limits_{1}^{+\infty} \dfrac{x\sqrt{x}+3}{2+4x+5x^3}\mathrm{d}x $ cũng hội tụ theo.
+
+\qed
+
+ \begin{myprob}
+     \recprob{Bài 3.2.6} $$\int\limits_{1}^{+\infty} \dfrac{\mathrm{d}x}{x\sqrt{x^2+1}}\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+Ta đặt: $\sqrt{1+x^2}=t-x$, khi đó:
+$\left\{\begin{array}{rl}
+    x&=\dfrac{t^2-1}{2t}\\
+    \sqrt{1+x^2}&=t-x=\dfrac{t^2+1}{2t}\\
+    \mathrm{d}x&=\dfrac{t^2+1}{2t^2}\mathrm{d}t
+\end{array}\right.$.
+Ta đổi biến: \begin{table}[htp]
+    \centering
+    \begin{tabular}{c|cc}
+        $x$ & 1 & $+\infty$  \\\hline 
+        $t$ & $\sqrt{2}+1$ & $+\infty$
+    \end{tabular}
+\end{table}
+
+Đổi biến tích phân đã cho thành: $$\int\limits_{\sqrt{2}+1}^{+\infty}\dfrac{2}{t^2-1}\mathrm{d}t=\left.\ln\left[\dfrac{t-1}{t+1}\right]\right|_{\sqrt{2}+1}^{\infty}=\lim\limits_{x\to\infty} \ln\left[\dfrac{t-1}{t+1}\right]-\lim\limits_{x\to{(\sqrt{2}+1)^+}} \ln\left[\dfrac{t-1}{t+1}\right]=0-\ln\dfrac{1}{1+\sqrt{2}}=-\ln\dfrac{1}{1+\sqrt{2}}$$
+
+Vậy tích phân đã cho  hội tụ.
+
+\qed
+
+ \begin{myprob}
+     \recprob{Bài 3.2.7} $$\int\limits_{1}^{+\infty} \dfrac{\cos(4x)}{1+3x^4}\mathrm{d}x $$
+\end{myprob}
+
+\loigiai
+
+$\forall x\geqslant 1$ ta luôn  có: $$\left|\dfrac{\cos(4x)}{1+3x^4}\right|=\dfrac{|\cos(4x)|}{1+3x^4}\leqslant \dfrac{1}{1+3x^4}\leqslant\dfrac{1}{3x^4}\leqslant\dfrac{1}{x^4} $$
+
+Do tích phân $\displaystyle\int\limits_{1}^{\infty}\dfrac{1}{x^4}\mathrm{d}x$ là tích phân \textit{Riemann} với $\alpha=4>1$ là tích phân hội tụ nên tích phân $\displaystyle\int\limits_{1}^{\infty}\left|\dfrac{\cos(4x)}{1+3x^4}\right|\mathrm{d}x$ cũng hội tụ.
+
+Theo \textbf{tiêu chuẩn hội tụ tuyệt đối} ta cũng có $\displaystyle\int\limits_{1}^{+\infty} \dfrac{\cos(4x)}{1+3x^4}\mathrm{d}x$ hội tụ theo.
+
+\qed
+
+\subsubsection{Tích phân suy rông loại 2}
+    \begin{myprob}
+        \recprob{Bài 3.2.8} Tính tích phân sau:
+        
+        $$ \int\limits_{1}^{e}\dfrac{\mathrm{d}x}{x\sqrt{\ln{x}}}$$
+        
+    \end{myprob}
+
+\loigiai
+
+Sử dụng phương pháp \textbf{Tích phân đổi biến}, $\dfrac{\mathrm{d}x}{x}=\mathrm{d}(\ln{x})$, ta có:
+
+$$ \int\limits_{1}^{e}\dfrac{\mathrm{d}x}{x\sqrt{\ln{x}}}=\int\limits_{1}^{e}[\ln{x}]^{\frac{-1}{2}}\mathrm{d}(\ln{x})=\left.2[\ln{x}]^{\frac{1}{2}}\right|_{1}^{e}=\left.2\sqrt{\ln{x}}\right|_1^e =2$$
+
+\qed
+    \begin{myprob}
+        \recprob{Bài 3.2.9} Tính tích phân sau:
+        
+        $$ \int\limits_{0}^{\infty}xe^{-x^2}\mathrm{d}x $$
+        
+    \end{myprob}
+
+\loigiai
+
+$$ \int\limits_{0}^{\infty}xe^{-x^2}\mathrm{d}x \stackrel{u=-x^2}{=} \dfrac{-1}{2}\int\limits_0^{-\infty}e^u\mathrm{d}u= \dfrac{1}{2}\int\limits_{-\infty}^0 e^u\mathrm{d}u =\left.\dfrac{1}{2}e^u\right|_{-\infty}^0=\dfrac{1}{2}e^0-\lim\limits_{u\to -\infty} e^u =\dfrac{1}{2}$$
+
+\qed
+
+\textbf{Xét tính hội tụ (phân kỳ) của các tích phân sau:}
+
+    \begin{myprob}
+        \recprob{Bài 3.2.10} 
+         $$ \int\limits_{1}^{\infty}\dfrac{\ln{(1+x)}}{x}\mathrm{d}x $$
+    \end{myprob}
+
+\loigiai 
+
+Ta có: $\forall x \in [1;+\infty)\Rightarrow \ln(1+x) \geqslant \ln{2}$.
+
+Ta xét tích phân sau: $$ J=\int\limits_{1}^{+\infty}\dfrac{\ln{2}}{x}\mathrm{d}x=\ln{2}\left[\ln|x|\right]_1^{+\infty}=+\infty$$
+
+Do đó, tích phân dã cho phân kì.
+\qed
+
+    \begin{myprob}
+        \recprob{Bài 3.2.11} 
+         
+        $$ \int\limits_{0}^{1}\dfrac{\ln{x}\mathrm{d}x}{1+x^2} $$
+        
+    \end{myprob}
+
+\loigiai
+
+Xét hàm số $f(x)=\dfrac{\ln{x}}{1+x^2}$, $f(x)$ có một tiệm cận đứng là $x=0$ khi $(x\to 0^+)$.
+
+Sử dụng  \textbf{vô cùng bé tương đương} sau $\ln{x}=\ln{[1+(1-x)]}\stackrel{x\to 1}{\sim}(x-1)$ 
+
+Ta được tích phân sau \textbf{tương đương} với tích phân ban đầu:
+
+\begin{align*}
+    J= \int\limits_{0}^{1}\dfrac{x-1}{1+x^2}\mathrm{d}x & = \int\limits_{0}^{1}\dfrac{x}{1+x^2}\mathrm{d}x - \int\limits_{0}^{1}\dfrac{1}{1+x^2}\mathrm{d}x \\
+     & = \left.\dfrac{1}{2}\ln|1+x^2|\right|_0^1- \left.\tan^{-1}(x)\right|_{0}^1\\
+     & = \dfrac{\ln{2}}{2}-\dfrac{\pi}{4}
+\end{align*}
+
+Tích phân $J$ hội tụ nên tích phân ban đầu cũng hội tụ.
+
+\begin{myprob}
+        \recprob{Bài 3.2.12}
+        
+        $$ \int\limits_{1}^{\infty}\dfrac{\sin{x}}{x}\mathrm{d}x $$
+        
+    \end{myprob}
+
+\loigiai
+
+Áp dụng \textbf{công thức tích phân từng phần} $\displaystyle\int\limits_a^b u\mathrm{d}v=uv|_a^b-\displaystyle\int\limits_a^b v\mathrm{d}u$,
+
+Ta có: \begin{align*}
+            \int\limits_{1}^{\infty}\dfrac{\sin{x}}{x}\mathrm{d}x & = \int\limits_{1}^{\infty}\dfrac{1}{x}\mathrm{d}(-\cos{x})\\
+                        & = \left.\dfrac{-\cos{x}}{x}\right|_1^{\infty}-\int\limits_{1}^{\infty}\dfrac{\cos{x}}{x^2}\mathrm{d}x\\
+                        & = \lim\limits_{x\to\infty}-\dfrac{\cos{x}}{x}+\cos{1}+I
+       \end{align*}
+       
+Ta có: 
+$$ J =\int\limits_1^{+\infty}\left|\dfrac{\cos{x}}{x^2}\right|\mathrm{d}x=\int\limits_1^{+\infty}\dfrac{|\cos{x}|}{x^2}\mathrm{d}x$$.
+
+Do $|\cos{x}|\leqslant 1$ và tích phân $\displaystyle\int\limits_1^{+\infty}\dfrac{1}{x^2}\mathrm{d}x=\left.\dfrac{-1}{x}\right|_1^{+\infty}=1$ nên tích phân $J$ hội tụ hay $I$ cũng hội tụ theo.
+
+Mặt khác, nếu đặt $f(x)=\dfrac{-\cos{x}}{x}$, khi đó theo nguyên lí kẹp, ta có:
+    $$ -\dfrac{1}{x}\leqslant f(x) \leqslant \dfrac{1}{x} \text{ và } \lim\limits_{x\to+\infty}\dfrac{-1}{x}=\lim\limits_{x\to+\infty}\dfrac{1}{x}=0 $$
+    
+    Suy ra: $$ \lim\limits_{x\to+\infty}f(x)=0 \Rightarrow \lim\limits_{x\to+\infty}-\dfrac{\cos{x}}{x} = 0 $$
+    
+    Vậy tích phân đã cho hội tụ.
+
+\qed
+
+\begin{myprob}
+    \recprob{Bài 3.2.13} Tính tích phân bất định sau:
+     $$I= \int\dfrac{1}{(x^2+1)^2}\mathrm{d}x$$
+\end{myprob}
+
+\loigiai
+
+Đặt $x=\tan u \Rightarrow \mathrm{d}x = \dfrac{1}{\cos^2{u}}\mathrm{d}u$ và $u=tan^{-1}x$.
+
+Do $1+\tan^2u=\dfrac{1}{\cos^2{u}}$ nên tích phân bất định viết lại như sau:
+
+$$ I=\int\dfrac{1}{\dfrac{1}{\cos^4u}\cdot\cos^2u}\mathrm{d}u = \int\cos^2u\mathrm{d}u$$.
+
+Sử dụng công thức hạ bậc: $\cos^2u=\dfrac{1+\cos{2u}}{2}$, ta có:
+
+ $$ I=\int\dfrac{1+\cos{2u}}{2}\mathrm{d}u=\dfrac{1}{2}\left(u+\dfrac{1}{2}\sin{2u}\right)+C=\dfrac{1}{2}\left(\tan^{-1}x+\dfrac{1}{2}\sin(2\tan^{-1}x)\right)+C$$
+ 
+
+\qed
+
+\begin{myprob}
+    \recprob{Bài 3.2.14} Xét sự hội tụ hay phân kỳ của chuỗi sau:
+    
+     $$ \sum\limits_{n=1}^{+\infty}\dfrac{1}{5^n}\left(\dfrac{2n^2+2n+3}{2n^2+3n+4}\right)^{n^2} $$
+\end{myprob}
+
+\loigiai
+
+Đặt $a_n=\dfrac{1}{5^n}\left(\dfrac{2n^2+2n+3}{2n^2+3n+4}\right)^{n^2}$, do dãy $a_n$ có chứa lũy thừa của $n$ nên ta sẽ ưu tiên dùng
+\textbf{Tiên chuẩn căn thức - Root test} hay còn gọi là \textbf{tiêu chuẩn Cauchy} để khảo sát sự hội tụ của chuỗi.
+
+Ở bài toán này ta sẽ phải sử dụng một giới hạn đặt biệt sau: $$\lim\limits_{x\to\pm\infty}\left(1+\dfrac{1}{x}\right)^x = e  $$
+
+Ta có :  \begin{align*}
+               \lim\limits_{n\to+\infty} \sqrt[n]{|a_n|} &= \lim\limits_{n\to+\infty} \dfrac{1}{5}\left|\left(\dfrac{2n^2+2n+3}{2n^2+3n+4}\right)^{n}\right|= \dfrac{1}{5}\left|\lim\limits_{n\to+\infty}\left(\dfrac{2n^2+2n+3}{2n^2+3n+4}\right)^{n}\right| \\
+                &= \dfrac{1}{5}\left|\lim\limits_{n\to+\infty}\left(1+\dfrac{-n-1}{2n^2+3n+4}\right)^n\right| \\
+               & = \dfrac{1}{5}\left|\lim\limits_{n\to+\infty}\left[\left(1+\dfrac{1}{\dfrac{2n^2+3n+4}{-n-1}}\right)^{\frac{2n^2+3n+4}{-n-1}}\right]^{\frac{n(-n-1)}{2n^2+3n+4}}\right| \\
+               & = \dfrac{1}{5}e^{-\frac{1}{2}}\\
+               & =\dfrac{1}{5\sqrt{e}} < 1
+         \end{align*}
+         
+         Vậy chuỗi đã cho hội tụ theo 
+         \textbf{tiêu chuẩn Cauchy}
+
+
+\qed
+
+\begin{myprob}
+
+$$\int\limits_a^b\int\limits_c^df(x,y)\mathrm{d}x\mathrm{d}y, \, \iint\limits_\mathbf{R}f(x,y)\mathrm{dA},\, \nabla f=\nabla g,\,
+ \nabla f = \langle f_x(a,y),\, f_y(x,y) \rangle = f_x(x,y)\mathbf{i} + f_y(x,y)\mathbf{j},\, D_\mathbf{u}f(x,y) = \nabla f \cdot \mathbf{u}$$
+ 
+ $$\mathbf{u}\cdot(\mathbf{v}\times\mathbf{w})= \mathbf{det}\begin{bmatrix}
+  u_1 & u_2 & u_3 \\
+  v_1 & v_2 & v_3 \\
+  w_1 & w_2 & w_3
+ \end{bmatrix}
+  =
+ \begin{vmatrix}
+  u_1 & u_2 & u_3 \\
+  v_1 & v_2 & v_3 \\
+  w_1 & w_2 & w_3
+ \end{vmatrix}
+ = u_1\begin{vmatrix}
+          v_2  &  v_3 \\
+          w_2  &  w_3 
+      \end{vmatrix} 
+      -  u_2\begin{vmatrix}
+          v_1  &  v_3 \\
+          w_1  &  w_3 
+      \end{vmatrix}
+      + u_3\begin{vmatrix}
+          v_1  &  v_2 \\
+          w_1  &  w_2 
+      \end{vmatrix}$$
+      
+      $$\iiint\limits_{\textbf{E}}\sqrt{x^2+z^2}\mathrm{d}V$$
+      
+      
+
+\end{myprob}
+
+\begin{myprob}
+          \recprob{Problem}  Khảo sát sự hội tụ của tích phân sau: $$\int\limits_1^{+\infty}\dfrac{\ln(1+\sqrt[4]{x})}{e^{3x}-1}\mathrm{d}x $$
+          
+          \loigiai
+          
+          Ta có khai triển \textbf{Taylor} của hàm số $\ln(1+\sqrt[4]{x})$ là 
+          $$ \ln(1+\sqrt[4]{x})=\sqrt[4]{x}-\dfrac{1}{2}\sqrt{x}+\dfrac{1}{3}(\sqrt[4]{x})^3-\dfrac{1}{4}x+\cdots$$.
+          
+          Do đó ta có đẳng thức tương đương sau:
+          $$\dfrac{\ln(1+\sqrt[4]{x})}{e^{3x}-1} \sim \dfrac{\sqrt[4]{x}-\dfrac{1}{2}\sqrt{x}+\dfrac{1}{3}(\sqrt[4]{x})^3-\dfrac{1}{4}x}{e^{3x}-1}\sim \dfrac{-\dfrac{1}{4}x}{e^{3x}}$$ khi $x\to\infty$
+          
+          Ta xét tích phân sau, là tích phân có cùng tính chất với tích phân đã cho:
+          
+          $$I= \int\limits_1^{+\infty}\dfrac{-\dfrac{1}{4}x}{e^{3x}}\mathrm{d}x = -\dfrac{1}{4}\int\limits_1^{+\infty}x\cdot e^{-3x}\mathrm{d}x $$
+          
+          Ta có:
+          
+          \begin{align*}
+              I & = -\dfrac{1}{4}\int\limits_1^{+\infty}x\cdot e^{-3x} \mathrm{d}x \\
+                & = \dfrac{1}{12}\int\limits_1^{+\infty}x\mathrm{d}e^{-3x} \\
+                & = \dfrac{1}{12}\left[\left.e^{-3x}\cdot x\right|_1^{+\infty}-\int\limits_1^{+\infty}e^{-3x}\mathrm{d}x\right]\\
+                & = \dfrac{1}{12}\left[\lim\limits_{x\to\infty} \dfrac{x}{e^{3x}}-\dfrac{1}{e^3}+\left.\dfrac{1}{3e^{3x}}\right|_1^{\infty}\right]\\
+                & = -\dfrac{1}{18e^3}
+          \end{align*}
+          
+          Do đó $I$ hội tụ nên tích phân đã cho hội tụ theo.
+ \end{myprob}
+ 
+

@@ -1,0 +1,138 @@
+\subsection{Tích phân bất định}
+\begin{myprob}
+               \recprob{Bài 3.1.1} Tính các tích phân bất định sau:\\
+               \begin{equation*}
+                 \int\dfrac{1}{\cos x}\mathrm{d}x,\qquad \int\dfrac{1}{\sin x}\mathrm{d}x
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai
+   
+   Sử dụng phương pháp đổi biến.
+               
+   Đặt $t=\tan\dfrac{x}{2}$, khi đó ta có các đẳng thức lượng giác sau: $\cos{x}=\dfrac{1-t^2}{1+t^2}$ và $\sin x=\dfrac{2t}{1+t^2}$.
+   
+   Ta có: $\mathrm{d}t=\dfrac{1}{2}\cdot(1+t^2)\mathrm{d}x$ hay $\mathrm{d}x=\dfrac{2\mathrm{d}t}{1+t^2}$.
+   
+   \begin{itemize}
+       \item $$\int\dfrac{1}{\cos x}\mathrm{d}x=\int\dfrac{1+t^2}{1-t^2}\cdot\dfrac{2\mathrm{d}t}{1+t^2}=\int\dfrac{2\mathrm{d}t}{1-t^2}=\ln\left\vert\dfrac{t+1}{t-1}\right\vert \stackrel{t=\tan\dfrac{x}{2}}{=} \ln\left\vert\dfrac{\tan\dfrac{x}{2}+1}{\tan\dfrac{x}{2}-1}\right\vert=\ln\left\vert \tan\left( \dfrac{x}{2}+\dfrac{\pi}{4}\right) \right\vert+C$$
+       \item $$\int\dfrac{1}{\sin x}\mathrm{d}x = \int\dfrac{1+t^2}{2t}\cdot\dfrac{2\mathrm{d}t}{1+t^2} = \int\dfrac{\mathrm{d}t}{t}=\ln\vert t\vert \stackrel{t=\tan\dfrac{x}{2}}{=} \ln\left|\tan\dfrac{x}{2}\right|+C$$
+   \end{itemize}
+   \qed
+
+ \begin{myprob}
+               \recprob{Bài 3.1.2} Tính các tích phân bất định sau:\\
+               \begin{equation*}
+                   \int\tan x\mathrm{d}x,\qquad \int\cot{x}\mathrm{d}x
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai    
+   
+    Sử dụng phương pháp đổi biến.
+   
+   \begin{itemize}
+       \item $$ \int\tan{x}\mathrm{d}x =\int\dfrac{\sin x}{\cos x}\mathrm{d}x=\int\dfrac{(-\cos{x})^\prime}{\cos
+       x}\mathrm{d}x=-\ln|\cos{x}| + C$$
+       \item $$ \int\cot{x}\mathrm{d}x = \int\dfrac{\cos x}{\sin x}\mathrm{d}x=\int\dfrac{(\sin{x})^\prime}{\sin
+       x}\mathrm{d}x=\ln|\sin{x}| + C $$
+   \end{itemize}
+       \qed
+   
+ \begin{myprob}
+               \recprob{Bài 3.1.3} Tính các tích phân bất định sau:\\
+               \begin{equation*}
+                   \int\sin^3x\mathrm{d}x,\qquad \int\cos^3x\mathrm{d}x
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai  
+   
+    Sử dụng phương pháp đổi biến.
+    
+    \begin{itemize}
+        \item  $$ \int\sin^3x\mathrm{d}x =\int\sin{x}.(1-\cos{x})^2\mathrm{d}x=\int (\cos{x}-1)^2\mathrm{d}\cos{x}\stackrel{t=\cos{x}}{=} \int (t^2-1)\mathrm{d}t=\dfrac{t^3}{3}-t+C\stackrel{t=\cos{x}}{=} \dfrac{\cos^3x}{3}-\cos{x}+C$$
+        \item $$ \int\cos^3x\mathrm{d}x =\int\cos{x}.(1-\sin{x})^2\mathrm{d}x=\int (1-\sin{x})^2\mathrm{d}\sin{x}\stackrel{t=\sin{x}}{=} \int (1-t^2)\mathrm{d}t=t-\dfrac{t^3}{3}+C\stackrel{t=\sin{x}}{=} \sin{x}-\dfrac{\sin^3x}{3}+C$$
+    \end{itemize}
+        \qed
+    
+    
+   
+ \begin{myprob}
+               \recprob{Bài 3.1.4} Tính các tích phân bất định sau:\\
+               \begin{equation*}
+                     \int e^{\sin x}\mathrm{d}x,\qquad \int e^{\cos x}\mathrm{d}x
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai    
+   
+   Ta có: $$ \int e^u dx=\dfrac{e^u}{u^\prime}+C$$ với $u=u(x)$.
+   
+   \begin{itemize}
+       \item $u(x)=\sin{x}$ $$  \int e^{\sin x}\mathrm{d}x = \dfrac{e^{\sin x}}{\cos{x}}+C$$
+       \item $u(x)=\cos{x}$ $$  \int e^{\cos x}\mathrm{d}x = \dfrac{e^{\cos x}}{\sin{x}}+C$$ 
+   \end{itemize}
+       \qed
+   
+ \begin{myprob}
+               \recprob{Bài 3.1.5} Tính  tích phân bất định sau:\\
+               \begin{equation*}
+                  \int\dfrac{\mathrm{d}x}{1+x^3}\mathrm{d}x 
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai   
+   
+   Biến đổi tích phân đã cho thành:
+   \begin{equation}
+   \label{eq1}
+       \int\dfrac{\mathrm{d}x}{1+x^3}\mathrm{d}x =\int\dfrac{\mathrm{d}x}{(1+x)(1-x+x^2)}\mathrm{d}x =\int\left(\dfrac{A}{1+x}+\dfrac{Bx+C}{1-x+x^2}\right)\mathrm{d}x  
+   \end{equation}
+   Để giải quyết tích phân này ta sẽ dùng phương pháp \textbf{Hệ số bất định}, cụ thể như sau:
+   trong công thức  \eqref{eq1}  ta có $A, B, C$ là các hằng số thỏa mãn  đồng nhất thức sau:
+   $$ A(1-x+x^2) + (Bx+C)(1+x) \equiv 1 $$. 
+   
+   Hay $A, B, C$ là nghiệm của hệ phương trình sau: 
+   $\left\{\begin{array}{rl}
+     A + B   &=0  \\
+    -A + B +C&=0  \\
+    A +C &=1
+   \end{array}\right.$
+   
+   Giải hệ phương trình trên ta được: $A=\dfrac{1}{3}, B=-\dfrac{1}{3}, C=\dfrac{2}{3}$ .
+   
+   Viết lại tích phân \eqref{eq1}:
+   $$ \int\dfrac{\mathrm{d}x}{1+x^3} = \int\dfrac{1}{3(x+1)}\mathrm{d}x+\underbrace{\int\dfrac{2-x}{3(1-x+x^2)}\mathrm{d}x}_{I_1}=\dfrac{1}{3}\ln|x+1|+I_1$$
+   
+   Ta tính tích phân $I_1$, để làm điều đó, ta cần biến đổi như sau: 
+   $$ I_1=-\dfrac{1}{6}\int\dfrac{2x-1}{1-x+x^2}\mathrm{d}x+\dfrac{1}{2}\underbrace{\int\dfrac{1}{1-x+x^2}\mathrm{d}x}_{I_2} =-\dfrac{1}{6}\ln|1-x+x^2|+\dfrac{1}{2}I_2$$
+   
+   Ta tiếp tục tính $I_2$ bằng cách đặt $\left(x-\dfrac{1}{2}\right)=\dfrac{\sqrt{3}}{2}\tan t$, suy ra $t=\arctan\left[\dfrac{\sqrt{3}}{3}(2x-1)\right]$ và  $\mathrm{d}x=\dfrac{\sqrt{3}}{2}(1+\tan^2t)\mathrm{d}t$.
+   
+   Rút gọn và viết lại ta được: $$I_2=\int\dfrac{2\sqrt{3}}{3}\mathrm{d}t=\dfrac{2\sqrt{3}t}{3}+C\stackrel{t=\arctan\left[\frac{\sqrt{3}}{3}(2x-1)\right]}{=} \dfrac{2\sqrt{3}}{3}\arctan\left[\frac{\sqrt{3}}{3}(2x-1)\right]+C$$
+   
+   Vậy $$\int\dfrac{\mathrm{d}x}{1+x^3} = \dfrac{1}{3}\ln|x+1|-\dfrac{1}{6}\ln|1-x+x^2|+\dfrac{\sqrt{3}}{3}\arctan\left[\frac{\sqrt{3}}{3}(2x-1)\right]+C $$
+   \qed
+   
+ \begin{myprob}
+               \recprob{Bài 3.1.6} Tính các tích phân bất định sau:\\
+               \begin{equation*}
+                    \int\dfrac{\mathrm{d}x}{\sqrt{x^2+a}}, \qquad \int\sqrt{1+x^2}\mathrm{d}x,\qquad \int x^2\sqrt{1+x^2}\mathrm{d}x
+               \end{equation*}
+           \end{myprob}
+   
+   \loigiai    
+   
+   \begin{enumerate}
+       \item   Ta đặt $\sqrt{a+x^2}=t-x$, khi đó ta có: $x=\dfrac{t^2-a}{2t}$ và $\mathrm{d}x=\dfrac{(t^2+a)\mathrm{d}t}{2t^2}$. Tích phân đã cho viết lại:
+       $$ \int\dfrac{\mathrm{d}x}{\sqrt{x^2+a}}=\int\dfrac{t^2+a}{2t^2}\cdot\dfrac{2t}{t^2+a}\mathrm{d}t=\int\dfrac{\mathrm{d}t}{t}=\ln|t|+C\stackrel{t=x+\sqrt{x^2+a}}{=}\ln\left|x+\sqrt{x^2+a}\right| +C$$
+       \item  Theo bài (1) ở trên nếu thay $a=1$, bằng phép đặt tương tự ta có: $\sqrt{1+x^2}=1-x$ và $x=\dfrac{t^2-1}{2t}$ và $\mathrm{d}x=\dfrac{(t^2+1)\mathrm{d}t}{2t^2}$, suy ra:
+       $$ \int\sqrt{1+x^2}\mathrm{d}x = \int\dfrac{(t^2+1)^2}{4t^3}\mathrm{d}t=\int\left(\dfrac{t}{4}+\dfrac{1}{2t}+\dfrac{1}{4t^3}\right)\mathrm{d}t=\dfrac{t^2}{8}+\dfrac{\ln t}{2}-\dfrac{1}{8t^2}+C$$
+       
+       Thay $t=\sqrt{1+x^2}+x$ vào, ta được kết quả cuối cùng:  
+       $$ \int\sqrt{1+x^2}\mathrm{d}x = \dfrac{(\sqrt{1+x^2}+x)^2}{8}+\dfrac{\ln(\sqrt{1+x^2}+x)}{2}-\dfrac{1}{8(\sqrt{1+x^2}+x)^2}+C$$
+       \item  Ta sử dụng phép đặt như bài (2), khi đó ta có: 
+       $$ \int x^2\sqrt{1+x^2}\mathrm{d}x =\int\left(\dfrac{t^2-1}{2t}\right)\cdot\dfrac{t^2+1}{2t}\cdot\dfrac{t^2+1}{2t^2}\mathrm{d}t=\int\dfrac{(t^4-1)^2}{8t^4}\mathrm{d}t=\int\left(\dfrac{t^4}{8}+\dfrac{1}{4}+\dfrac{1}{8t^4}\right)=\dfrac{t^5}{40}+\dfrac{t}{4}-\dfrac{1}{24t^3}+C  $$
+       \qed
+   \end{enumerate}

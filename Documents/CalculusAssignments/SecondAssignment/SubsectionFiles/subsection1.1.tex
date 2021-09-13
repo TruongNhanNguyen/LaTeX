@@ -1,0 +1,79 @@
+\subsection{Giới hạn cơ bản.}
+        
+            \begin{myprob}
+                \recprob{Bài 1.1.1} Tính giới hạn sau:\\
+                \begin{equation*}
+                    \lim\limits_{x\to\infty}\dfrac{x-1}{3x+2}
+                \end{equation*}
+            \end{myprob}
+            
+            \loigiai
+            
+            Chia tử và mẫu cho $x$, ta được:
+            $$\lim\limits_{x\to\infty}\dfrac{x-1}{3x+2}=\lim\limits_{x\to\infty}\dfrac{1-\dfrac{1}{x}}{3+\dfrac{2}{x}}=\dfrac{1}{3}$$
+            
+            Do $\lim\limits_{x\to\infty}\dfrac{a}{x}=0$
+            \qed
+            
+             \begin{myprob}
+                \recprob{Bài 1.1.2} Tính giới hạn sau:\\
+                \begin{equation*}
+                    \lim\limits_{x\to\frac{\pi}{6}}\sin{x}
+                \end{equation*}
+            \end{myprob}
+            
+            \loigiai
+            
+            Ta có: $$\lim\limits_{x\to\frac{\pi}{6}}\sin{x}=\sin{\dfrac{\pi}{6}}=\dfrac{1}{2}$$.\\
+            Do $f(x)=\sin x$ là một hàm số liên tục trên tập xác định của nó, nên $\lim\limits_{x\to x_0}f(x)=f(x_0)$.
+            \qed
+            
+             \begin{myprob}
+                \recprob{Bài 1.1.3} Tính giới hạn sau:\\
+                \begin{equation*}
+                   \lim\limits_{x\to\infty}(\sqrt{x^2+1}-x)
+                \end{equation*}
+            \end{myprob}
+            
+            \loigiai
+            
+            Biểu thức cần lấy giới hạn có dạng $\infty-\infty$ là dạng vô định. Ta có thể khử dạng vô định bằng cách nhân lượng liên hiệp là $\sqrt{x^2+1}+x$ vào biểu thức như sau:
+            $$ \lim\limits_{x\to\infty}(\sqrt{x^2+1}-x)= \lim\limits_{x\to\infty}\dfrac{(\sqrt{x^2+1}-x).(\sqrt{x^2+1}+x)}{\sqrt{x^2+1}+x}=\lim\limits_{x\to\infty}\dfrac{1}{\sqrt{x^2+1}+x}$$
+            
+            Đến đây ta có thể chia cả tử và mẫu của biểu thức cho $x$ và tính được giới hạn:
+            $$ \lim\limits_{x\to\infty}(\sqrt{x^2+1}-x)=\lim\limits_{x\to\infty}\dfrac{1}{\sqrt{x^2+1}+x}=\lim\limits_{x\to\infty}\dfrac{\dfrac{1}{x}}{\sqrt{1+\dfrac{1}{x}}+1}=\dfrac{0}{2}=0.$$
+            \qed
+            
+             \begin{myprob}
+                \recprob{Bài 1.1.4} Tính giới hạn sau:\\
+                \begin{equation*}
+                    \lim\limits_{x\to\infty}\dfrac{x\sin{x}}{x^2-100x+3000}
+                \end{equation*}
+            \end{myprob}
+            
+            \loigiai
+            
+            Để tính được giới hạn của hàm số trên, ta có thể dùng \textbf{Nguyên lí kẹp}.\\
+            Ta có: $$-1\leqslant\sin x\leqslant 1$$ Do đó:
+            $$\dfrac{-x}{x^2-100x+3000}\leqslant\dfrac{x\sin{x}}{x^2-100x+3000}\leqslant\dfrac{x}{x^2-100x+3000}$$
+            
+            Giới hạn của vế phải và vế trái cùng bằng 0 nên $\lim\limits_{x\to\infty}\dfrac{x\sin{x}}{x^2-100x+3000}=0$
+            \qed
+            
+            
+            
+            
+             \begin{myprob}
+                \recprob{Bài 1.1.5} Tìm giới hạn của hàm số (nếu tồn tại):\\
+                \begin{equation*}
+                    \lim\limits_{x\to\infty}\sin{x}
+                \end{equation*}
+            \end{myprob}
+            
+            \loigiai
+            
+            Ta chọn $x=\dfrac{\pi}{2}+k2\pi\quad (k\in\mathbb{Z})$, khi đó: $\lim\limits_{x\to\infty}\sin{x}=1$. Do $\sin x $ là hàm tuần hoàn với chu kì $k2\pi$.\\
+            Tương tự ta chọn $x=-\dfrac{\pi}{2}+l2\pi\quad (l\in\mathbb{Z})$, khi đó ta  có: $\lim\limits_{x\to\infty}\sin{x}=-1$. Do $\sin x $ là hàm tuần hoàn với chu kì $l2\pi$.\\
+            Do giá trị của $\lim\limits_{x\to\infty}\sin{x}$ ở hai trường hợp không bằng nhau nên giới hạn cần tìm không tồn tại.
+            \qed
+            
