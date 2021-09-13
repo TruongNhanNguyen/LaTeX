@@ -1,0 +1,36 @@
+\usepackage[utf8]{vietnam}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{amsfonts,amsmath,amssymb,mathtools,eucal}
+\usepackage{mathptmx}
+%\usepackage{euler}
+\usepackage{xcolor}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{fancybox}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\cirPagenum{\thepage}}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\qed}{\hfill{$\color{cyan}\blacksquare$}}
+\newcommand{\cirPagenum}[1]{\tikz[baseline]{\node[anchor=base,circle,draw=none,minimum size=2pt,inner sep=0.75pt,line width=0.75pt,fill=cyan!75!black]{\textbf{\rmfamily\color{white}#1}};}}
+\newcommand{\recprob}[1]{\tikz[baseline]{\node[anchor=base,rectangle,draw=none,left color = gray , right color =teal ,inner sep=5pt,text=white,rounded corners]{\textbf{\rmfamily#1}};}}
+\newcommand{\loigiai}{\textbf{Lời giải:}}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\labelitemi}{$\color{red}\blacktriangleright$}
+\renewcommand{\labelitemii}{$\bullet$}
+
+\newenvironment{myprob}{%
+                          \begin{tcolorbox}[enhanced,colback=black!5!white,colframe=cyan!95!black,boxsep=0pt,boxrule=0pt,drop fuzzy shadow,sharpish corners
+                          ]
+                          }{
+                          
+                          \end{tcolorbox}%
+                            }
