@@ -1,0 +1,24 @@
+
+     \begin{myprob}
+        \cau{8} Nhập tên sản phẩm, số lượng và đơn giá. Tính tiền và thuế giá trị gia tăng phải trả, biết:
+            \begin{itemize}
+                \item Tiền = số lượng * đơn giá.
+                \item Thuế giá trị gia tăng = 10\% tiền.
+            \end{itemize}
+    \end{myprob}
+    
+    \textbf{Sơ đồ giải thuật:}
+    
+    \begin{center}
+        \begin{tikzpicture}[auto,midway]
+           \node[begin](begin8) {Bắt đầu};
+           \node[import](import8) [below=10pt of begin8] {Tên SP, số lượng, đơn giá, tiền,VAT};
+           \node[export](export8) [below=10pt of import8] {tiền = số lượng * đơn giá; thuế GTGT=0,1 * tiền};
+           \node[convergence](convergence8) [below=10pt of export8] {}; 
+           \node[begin](end8) [below=10pt of convergence8] {Kết thúc}; 
+           \path[processing flow] (begin8) edge (import8)
+                                  (import8) edge (export8)
+                                  (export8) edge (convergence8)
+                                  (convergence8) edge (end8);
+        \end{tikzpicture}
+    \end{center}

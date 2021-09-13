@@ -1,0 +1,27 @@
+\begin{myprob}
+    \cau{3} Tính giá trị biểu thức: $S = 1+2+\ldots+n$
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật:}
+
+    \begin{center}
+        \begin{tikzpicture}[auto,midway]
+             \node[begin](begin3) {Bắt đầu};
+             \node[import](import3) [below=10pt of begin3] {$n,i=1,S=0$};
+             \node[condition](condition3) [below=10pt of import3] {$i\leqslant n$};
+             \node[calc](calc31) [below=10pt of condition3] {$S=S+i$}; 
+             \node[calc](calc32) [left=1cm of calc31] {$i++$}; 
+             \node[convergence](convergence3) [right=1cm of calc31] {}; 
+             \node[begin](end3) [below=10pt of convergence3] {Kết thúc}; 
+             \path[processing flow] (begin3) edge (import3)
+                                    (import3) edge (condition3)
+                                    (condition3) edge node{Đúng} (calc31)
+                                    (calc31) edge (convergence3)
+                                             edge (calc32)
+                                    (calc32) edge (calc32|-condition3)
+                                    (calc32|-condition3) edge (condition3)
+                                    (condition3.east) edge node{Sai} (condition3.east-|convergence3)
+                                    (condition3.east-|convergence3) edge (convergence3)
+                                    (convergence3) edge (end3);
+        \end{tikzpicture}
+    \end{center}

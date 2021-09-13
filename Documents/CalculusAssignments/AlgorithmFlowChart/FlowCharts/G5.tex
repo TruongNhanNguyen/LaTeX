@@ -1,0 +1,32 @@
+\begin{myprob}
+    \cau{5} Tìm số lớn nhất trong 3 số.
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật:}
+     
+     \begin{center}
+         \begin{tikzpicture}[auto,midway]
+               \node[begin](begin5) {Bắt đầu}; 
+               \node[import](import5) [below=10pt of begin5] {$a,b,c$};
+               \node[condition](condition51) [below=10pt of import5] {$ a > b$};
+               \node[condition](condition52) [right=1cm of condition51] {$b>c$};
+               \node[export](export51) [right=1cm of condition52] { $b$ là số lớn nhất}; 
+               \node[condition](condition53) [below=10pt of condition51] {$ a > c$};
+               \node[export](export52) [below=0.65 of condition52] { $c$ là số lớn nhất};   
+               \node[export](export53) [below=10pt of condition53] { $a$ là số lớn nhất}; 
+               \node[convergence](convergence5) [right=4.2cm of export53] {}; 
+               \node[begin](end5) [below=10pt of convergence5] {Kết thúc}; 
+               \path[processing flow] (begin5) edge (import5)
+                                      (import5) edge (condition51)
+                                      (condition51) edge node{Đúng} (condition53)
+                                                    edge node{Sai} (condition52)
+                                      (condition52) edge node{Đúng} (export51)
+                                                    edge node{Sai} (export52)
+                                      (condition53) edge node{Đúng} (export53)
+                                                    edge node{Sai} (export52)
+                                      (export53) edge (convergence5)
+                                      (convergence5) edge (end5)
+                                      (export52) edge (export52|-export53)
+                                      (export51) edge (convergence5) ;
+         \end{tikzpicture}
+     \end{center}

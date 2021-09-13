@@ -1,0 +1,24 @@
+\begin{myprob}
+    \cau{12} Nhập vào 2 số nguyên. Tính min và max của hai số.
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật:}
+
+\begin{center}
+    \begin{tikzpicture}[auto, midway]
+         \node[begin](begin12){Bắt đầu};
+         \node[import](import12)[below=10pt of begin12]{$a,b$};
+         \node[condition](condition12)[below=10pt of import12]{$a>b$};
+         \node[export](export121)[right=1cm of condition12]{$a$ = MAX, $b$ = MIN};
+         \node[export](export122)[below=10pt of condition12]{$b$ = MAX, $a$ = MIN};
+         \node[convergence](convergence12)[below=0.95cm of export121]{};
+         \node[begin](end12)[below=20pt of convergence12]{Kết thúc};
+         \path[processing flow] (begin12) edge (import12)
+                                (import12) edge (condition12)
+                                (condition12) edge node{Đúng} (export121)
+                                              edge node{Sai} (export122)
+                                (export122) edge (convergence12)
+                                (export121) edge (convergence12)
+                                 (convergence12) edge (end12);
+    \end{tikzpicture}
+\end{center}

@@ -1,0 +1,21 @@
+\begin{myprob}
+    \cau{6} Nhập năm sinh của một người. Tính tuổi người đó?
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật:}
+
+\begin{center}
+    \begin{tikzpicture}[auto,midway]
+        \node[begin](begin6) {Bắt đầu}; 
+        \node[import](import6) [below=10pt of begin6] {$\texttt{Năm sinh, tuổi}$};
+        \node[calc](calc6) [below=10pt of import6] {$\textbf{tuổi}=2020-\textbf{năm sinh}$};
+        \node[export](export6)[below=10pt of calc6]{Tuổi};
+        \node[convergence](convergence6)[below=10pt of export6]{};
+        \node[begin](end6)[below=10pt of convergence6] {Kết thúc};
+        \path[processing flow] (begin6) edge (import6)
+                                (import6) edge (calc6)
+                                (calc6) edge (export6)
+                                (export6) edge (convergence6)
+                                (convergence6) edge (end6);
+    \end{tikzpicture}
+\end{center}

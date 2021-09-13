@@ -1,0 +1,33 @@
+\begin{myprob}
+    \cau{1} Giải phương trình bậc nhất $ax+b=0$.
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật:}
+
+\begin{center}
+    
+    \begin{tikzpicture}[midway,auto]
+         \node[begin](begin1) {Bắt đầu};
+         \node[import](import1) [below=10pt of begin1] {$a,b$};
+         \node[condition](condition11) [below=10pt of import1] {$a=0$};    
+         \node[calc](calc1) [right=1cm of condition11] {$x=\dfrac{-b}{a}$};    
+         \node[condition](condition12) [below =10pt of condition11] {$b=0$};   
+         \node[export](export11) [below=10pt of condition12] {Phương trình vô nghiệm}; 
+         \node[export](export12) [right=1cm of condition12] {Phương trình có vô số nghiệm};
+         \node[convergence](convergence1) [right=5cm of export11] {}; 
+         \node[begin](end1) [below=10pt of convergence1] {Kết thúc}; 
+         \path[processing flow] (begin1) edge (import1)
+                                (import1) edge (condition11)
+                                (condition11) edge node{Đúng} (condition12)
+                                              edge node{Sai} (calc1)
+                                (condition12) edge node{Sai} (export11)
+                                              edge node{Đúng} (export12)
+                                (export11) edge (convergence1)
+                                (export12) edge (export12-|convergence1)
+                                (convergence1) edge (end1)
+                                (calc1) edge (calc1-|convergence1)
+                                (calc1-|convergence1) edge (convergence1)
+                               ;
+    \end{tikzpicture}
+    
+    \end{center}

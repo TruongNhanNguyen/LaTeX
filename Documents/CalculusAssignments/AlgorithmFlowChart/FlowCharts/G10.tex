@@ -1,0 +1,21 @@
+
+     \begin{myprob}
+        \cau{10} Nhập bán kính của đường tròn. Tính chu vi và diện tích của hình tròn đó.
+
+    \end{myprob}
+    
+     \textbf{Sơ đồ giải thuật:}
+    
+    \begin{center}
+        \begin{tikzpicture}[auto,midway]
+           \node[begin](begin10) {Bắt đầu};
+           \node[import](import10) [below=10pt of begin10] {$R,C,S, \textsf{const pi}=3.14$};
+           \node[export](export10) [below=10pt of import10] {$C=2*\textsf{pi}*R; S=\textsf{pi}*R*R$};
+           \node[convergence](convergence10) [below=10pt of export10] {}; 
+           \node[begin](end10) [below=10pt of convergence10] {Kết thúc}; 
+           \path[processing flow] (begin10) edge (import10)
+                                  (import10) edge (export10)
+                                  (export10) edge (convergence10)
+                                  (convergence10) edge (end10);
+        \end{tikzpicture}
+    \end{center}

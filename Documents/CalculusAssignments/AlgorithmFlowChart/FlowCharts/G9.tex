@@ -1,0 +1,19 @@
+\begin{myprob}
+    \cau{9}  Nhập điểm thi 3 môn Toán, Lý, Hóa của một sinh viên. Tính điểm trung bình của sinh viên đó.
+\end{myprob}
+
+\textbf{Sơ đồ giải thuật}
+
+ \begin{center}
+     \begin{tikzpicture}[auto,midway]
+       \node[begin](begin9) {Bắt đầu};
+       \node[import](import9) [below=10pt of begin9] {Toán, Lý, Hóa, Điểm TB};
+       \node[export](export9) [below=10pt of import9] {$\textbf{Điểm TB}=\dfrac{1}{3}*(\textbf{Toán}+\textbf{Lý}+\textbf{Hóa})$};
+       \node[convergence](convergence9) [below=10pt of export9] {}; 
+       \node[begin](end9) [below=10pt of convergence9] {Kết thúc}; 
+       \path[processing flow] (begin9) edge (import9)
+                              (import9) edge (export9)
+                              (export9) edge (convergence9)
+                              (convergence9) edge (end9);
+     \end{tikzpicture}
+ \end{center}

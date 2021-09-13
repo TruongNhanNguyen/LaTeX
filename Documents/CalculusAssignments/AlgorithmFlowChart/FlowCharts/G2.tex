@@ -1,0 +1,41 @@
+\begin{myprob}
+    \cau{2} Kiểm tra một số nguyên $n$ là số nguyên tố không.
+\end{myprob}
+
+ \textbf{Sơ đồ giải thuật:}
+    
+    \begin{center}
+    
+        \begin{tikzpicture}[auto,midway]
+             \node[begin](begin2) {Bắt đầu};
+             \node[import](import2) [below=10pt of begin2] {$n,i$};
+             \node[condition] (condition23) [below=10pt of import2] {$n=\{0,1\}$};
+             \node[calc](calc21) [below=10pt of condition23] {$i=2$}; 
+             \node[condition](condition21) [below=10pt of calc21] {$i<[\sqrt{n}]+1$};
+             \node[condition](condition22) [below=10pt of condition21] {$n\,\vdots\,i$};
+             \node[export](export21) [below=10pt of condition22] { $n$ không phải là số nguyên tố}; 
+             \node[export](export22) [left=10pt of export21] {$n$ là số nguyên tố};
+             \node[convergence](convergence2) [below=10pt of export21] {}; 
+             \node[begin](end2) [below=10pt of convergence2] {Kết thúc}; 
+             \node[calc] (calc22) [right=1cm of condition22] {$i++$};
+             \path[processing flow] (begin2) edge (import2)
+                                    (import2) edge (condition23)
+                                    (condition23) edge node{Sai} (calc21)
+                                    (calc21) edge (condition21)
+                                    (condition21) edge node{Đúng} (condition22)
+                                    (condition22) edge node{Đúng} (export21)
+                                                  edge node{Sai}  (calc22)
+                                    (condition23) edge  node[above]{Đúng} (condition23-|export21.north west)
+                                    (condition23-|export21.north west) edge (export21.north west)
+%%%
+                                    (calc22) edge (calc22|-condition21)
+                                    (calc22|-condition21) edge (condition21)
+                                    (condition21.west) edge node{Sai} (condition21.west-|export22)
+                                    (export22) edge (export22|-convergence2)
+                                    (export22|-convergence2) edge (convergence2)
+                                    (condition21.west-|export22) edge (export22)
+                                    (export21) edge (convergence2)
+                                    (convergence2) edge (end2);
+        \end{tikzpicture}
+        
+    \end{center}
