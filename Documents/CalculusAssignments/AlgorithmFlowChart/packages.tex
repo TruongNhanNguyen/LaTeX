@@ -1,0 +1,34 @@
+\usepackage{amsmath,amssymb,amsfonts,mathtools,eucal}
+\usepackage{mathptmx}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric,shapes.symbols,shapes.misc,shadows}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily Bài tập nghiên cứu tuần 2 - Sơ đồ giải thuật và thuật toán.}
+\fancyfoot[C]{\cirPagenum{\thepage}}
+
+%\definecolor{myblue}{rgb}{0.0, 0.5, 0.69}
+
+\tikzset{every node/.style={semithick},
+         begin/.style={draw,ellipse,minimum size=1cm,fill=red!50,drop shadow},
+         condition/.style={draw,diamond,minimum size=1cm,fill=blue!50,drop shadow},
+         processing flow/.style={->,semithick,>=latex},
+         import/.style={draw,trapezium,trapezium left angle=60,trapezium right angle=120,minimum size=0.75cm,fill=green!50,drop shadow},
+         export/.style={draw,rectangle,rounded corners,minimum size=1cm,fill=orange!50,drop shadow},
+         calc/.style={draw,rectangle,sharp corners,fill=cyan!50,drop shadow},
+         convergence/.style={draw,circle,minimum size=0.5cm,fill=blue!10!white,drop shadow},
+%        
+}
+\newcommand{\cirPagenum}[1]{\tikz[baseline]{\node[anchor=base,circle,draw=red!50!orange,minimum size=2pt,inner sep=0.75pt,line width=0.75pt,fill=yellow,opacity=0.8]{\textbf{\rmfamily#1}};}}
+
+\newenvironment{myprob}{%
+                          \begin{tcolorbox}[enhanced,colback=magenta!10!white,colframe=magenta!90!black,boxsep=5pt,boxrule=0pt,drop fuzzy shadow,sharpish corners,
+                          ,borderline west={2pt}{-3pt}{magenta!90!black}]\sffamily}{
+                          
+                          \end{tcolorbox}%
+                            }
+\newcommand{\cau}[1]{{\bfseries Bài #1:\,}}
