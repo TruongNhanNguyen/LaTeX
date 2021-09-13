@@ -1,0 +1,159 @@
+\section{Khảo sát hàm số hai biến thực}
+\subsection{Giới hạn kép}
+
+\begin{prob}
+     \recprob{20} Chứng minh giới hạn sau không tồn tại: $\lim\limits_{(x,y)\to(0,0)}\dfrac{x^2-y^2}{x^2+y^2}$
+\end{prob}
+
+\solution
+
+Đặt $f(x,y) = \dfrac{x^2-y^2}{x^2+y^2}$, ta sẽ cho $(x,y) \to (0,0)$ dọc theo trục $Ox$, trên đường $y=0$, hàm số sẽ trở thành $f(x,0) = \dfrac{x^2}{x^2} = 1, \forall x\neq 0$, nên: 
+$$\lim\limits_{(x,y)\to(0,0)} f(x, y) = 1 $$
+
+Bây giờ, ta cho $(x,y) \to (0,0) $ dọc theo trục $Oy$, khi đó $x=0$ và $f(0, y) = \dfrac{-y^2}{y^2}= -1, \forall y\neq 0$, nên:
+
+$$ \lim\limits_{(x,y)\to(0,0)} f(x, y) = -1$$
+
+Bởi vì $f(x,y)$ có giới hạn khác nhau khi $(x,y) \to (0,0)$ theo hai đường khác nhau nên giới hạn kép không tồn tại.
+
+\qed
+
+\begin{prob}
+     \recprob{21} Giới hạn sau có tồn tại hay không (nếu có hãy tính giới hạn đó): $\lim\limits_{(x,y)\to(0,0)}\dfrac{xy}{x^2+y^2}$ 
+\end{prob}
+
+\solution
+
+Đặt $f(x,y) = \dfrac{xy}{x^2+y^2}$, ta sẽ cho $(x,y) \to (0,0)$ dọc theo trục $Ox$, trên đường $y=0$, hàm số sẽ trở thành $f(x,0) = \dfrac{0}{x^2} = 0, \forall x\neq 0$, nên: 
+$$\lim\limits_{(x,y)\to(0,0)} f(x, y) = 0 $$
+
+Bây giờ, ta cho $(x,y) \to (0,0) $ dọc theo trục $Oy$, khi đó $x=0$ và $f(0, y) = \dfrac{0}{y^2}= 0, \forall y\neq 0$, nên:
+
+$$ \lim\limits_{(x,y)\to(0,0)} f(x, y) = 0$$
+
+Ta tiếp tục cho $(x, y)\to(0,0)$ dọc theo đường $y=x$, khi đó hàm số $f(x,y)=\dfrac{x^2}{2x^2}=\dfrac{1}{2}, \forall x\neq 0$, suy ra:
+
+$$\lim\limits_{(x,y)\to(0,0)} f(x, y) = \dfrac{1}{2} $$
+
+Bởi vì $f(x,y)$ có giới hạn khác nhau khi $(x,y) \to (0,0)$ theo các đường khác nhau nên giới hạn kép không tồn tại.
+
+\qed
+
+\begin{prob}
+     \recprob{22} Tìm giới hạn sau nếu nó tồn tại: $\lim\limits_{(x,y)\to(0,0)}\dfrac{3x^2y}{x^2+y^2}$
+\end{prob}
+
+\solution
+
+Bằng cách làm tương tự như \recprob{20} và \recprob{21} ta chứng minh được $\lim\limits_{(x,y)\to(0,0)}\dfrac{3x^2y}{x^2+y^2}=0$ khi $(x,y)\to(0,0)$ theo các dường $x=0, y=0, y=x^2, x= y^2$. Nhưng chúng ta không thể kết luận hoàn toàn rằng  $\lim\limits_{(x,y)\to(0,0)}\dfrac{3x^2y}{x^2+y^2}=0$ mà sẽ phải chỉ ra giới hạn này tồn tại và nó bằng 0 (nếu có thể).
+
+Đặt $\varepsilon = 0$, ta sẽ tìm số $\delta$ sao cho:
+
+$$\text{Nếu\quad}0 < \sqrt{x^2+y^2} <\delta \text{\quad thì\quad} \left|\dfrac{3x^2y}{x^2+y^2}-0\right| < \varepsilon$$
+
+Có nghĩa là: $$ \text{Nếu\quad}0 < \sqrt{x^2+y^2} <\delta \text{\quad thì\quad} \dfrac{3x^2|y|}{x^2+y^2} < \varepsilon  $$
+
+Nhưng $x^2 \leqslant x^2+y^2 $ bởi vì $y^2\geqslant 0$, vì vậy $\dfrac{x^2}{x^2+y^2} \leqslant 1$ và:
+
+$$ \dfrac{3x^2|y|}{x^2+y^2} \leqslant 3|y| = 3\sqrt{y^2} \leqslant 3\sqrt{x^2+y^2} $$
+
+Ta chọn $\delta = \dfrac{\varepsilon}{3}$, khi đó:
+
+$$ \left|\dfrac{3x^2y}{x^2+y^2}-0\right|\leqslant 3\sqrt{x^2+y^2} < 3\delta \leqslant 3\left(\dfrac{\varepsilon}{3}\right) =\varepsilon$$
+
+
+Vậy theo định nghĩa giới hạn ta có: 
+
+$$\lim\limits_{(x,y)\to(0,0)}\dfrac{3x^2y}{x^2+y^2}=0$$
+\qed
+
+\subsection{Giới hạn lặp}
+
+\begin{prob}
+    \recprob{23} Tính giới hạn lặp sau: $\lim\limits_{x\to 1}\left[\lim\limits_{y\to 1}\left(\dfrac{x^2y^3-x^3y^2}{x^2-y^2}\right)\right]$
+\end{prob}
+
+\solution
+
+Đầu tiên ta tính giới hạn sau:$$ \lim\limits_{y\to 1}\left(\dfrac{x^2y^3-x^3y^2}{x^2-y^2}\right) = \dfrac{x^2-x^3}{x^2-1} = \dfrac{-x^2}{x+1} $$
+
+Tiếp theo : $$ \lim\limits_{x\to 1}\left[\lim\limits_{y\to 1}\left(\dfrac{x^2y^3-x^3y^2}{x^2-y^2}\right)\right] =\lim\limits_{x\to 1}    \dfrac{x^2-x^3}{x^2-1} = \lim\limits_{x\to 1}\dfrac{-x^2}{x+1} = -\dfrac{1}{2}$$
+
+\qed
+
+\begin{prob}
+    \recprob{24} Tính giới hạn lặp sau: $\lim\limits_{x\to \pi}\left[\lim\limits_{y\to \frac{\pi}{2}}\left(\dfrac{\cos{x}-\sin{2y}}{\cos{x}\cos{2y}}\right)\right]$
+\end{prob}
+
+\solution
+
+Ta có: $\lim\limits_{x\to \pi}\left[\lim\limits_{y\to \frac{\pi}{2}}\left(\dfrac{\cos{x}-\sin{2y}}{\cos{x}\cos{2y}}\right)\right] = 
+ \lim\limits_{x\to \pi}\left(\dfrac{\cos{x}}{-\cos{x}}\right) = -1$
+
+\qed
+
+\subsection{Đạo hàm riêng}
+
+\begin{prob}
+    \recprob{25} Cho hàm số $f(x, y) = 4- x^2- 2y^2$, tính $f_x(1,1)$ và $f_y(1,1)$.
+\end{prob}
+
+\solution
+
+Ta có: $$\begin{array}{lr}
+   f_x(x,y) = -2x,  &  f_x(1,1) = -2\\
+   f_y(x,y) = -4y,  &  f_y(1,1) = -4
+\end{array} $$
+
+\qed
+
+\begin{prob}
+    \recprob{26} Tính $\dfrac{\partial z}{\partial x}$ và $\dfrac{\partial z}{\partial y}$ với $z$ là hàm số của hai biến $x, y$ được cho bởi phương trình  $$ x^3 +y^3 + z^3 +6xyz + 4 = 0 $$ Sau đó tính giá trị của các đạo hàm riêng này tại điểm $ (-1, 1, 2)$.
+\end{prob}
+
+\solution
+
+Để tính đạo $\dfrac{\partial z}{\partial x}$ ta đạo hàm phương trình đã cho theo biến $x$ và coi hai biến $y,  z$ như hằng số, khi đó ta có: $$ 3x^2 + 3z^2\dfrac{\partial z}{\partial x} +6yz + 6xy\dfrac{\partial z}{\partial x} = 0  $$
+
+Suy ra: $$\dfrac{\partial z}{\partial x} =-\dfrac{x^2+2yz}{z^2+2xy} $$
+
+Tương tự, ta tính được: $$\dfrac{\partial z}{\partial y} = -\dfrac{y^2+2xz}{z^2+2xy} $$
+
+Điểm  $ (-1, 1, 2)$ thỏa mãn phương trình $ x^3 +y^3 + z^3 +6xyz + 4 = 0 $ nên nó nằm trên mặt cong và các giá trị  đạo hàm riêng tai điểm này là: 
+
+$\dfrac{\partial z}{\partial x} =-\dfrac{x^2+2yz}{z^2+2xy} =\dfrac{(-1)^2+2.1.2}{2^2+2.(-1).1}= -\dfrac{5}{2}$\hfill $\dfrac{\partial z}{\partial y} = -\dfrac{y^2+2xz}{z^2+2xy} = \dfrac{1^2+2.(-1).2}{2^2+2.(-1).(1)} = \dfrac{3}{2}$
+
+\qed
+
+\subsection{Tìm cực trị tự do của hàm 2 biến thực}
+
+\begin{prob}
+    \recprob{27} Tìm các cực trị tự do và điểm yên ngựa của hàm số sau $f(x,y)= x^4+y^4-4xy+1$
+\end{prob}
+
+\solution
+
+Đầu tiên ta tính các đạo hàm riêng: $$f_x=4x^3-4y, f_y = 4y^3 -4x $$
+
+Do các đạo hàm riêng này xác định tại mọi điểm thuộc $\mathbb{R}^2$ nên các điểm kỳ dị của hàm số chình là các nghiệm của phương trình $f_x=0$ và $f_y= 0$. Hay:
+   $$ x^3 - y = 0 \qquad \text{và} \qquad y^3 - x = 0 $$
+   
+   Để giải 2 phương trình trên ta thay $y= x^3$ từ phương trình đầu tiên vào phương trình thứ hai, khi đó ta được:
+   
+   $$ 0 = x^9 - x = x(x^4-1)(x^4+1) = x(x^2-1)(x^2+1)(x^4+1) $$
+   
+   Vì vậy có 3 nghiệm thực $x$ lần lượt là $0, -1, 1$, suy ra các điểm kỳ dị lần lượt là $(0,0), (-1, -1), (1,1)$
+   
+   Bây giờ ta tính các đạo hàm riêng cấp 2 và định thức $D(x,y)$:
+   
+   $$\begin{array}{lcr}
+     f_{xx} = 12x^2   & f_{xy} = -4  & f_{yy}= 12y^2 \\
+   \end{array}$$
+   
+   $$  D(x,y)  = f_{xx}f_{yy} - (f_{xy})^2 = 144x^2y^2-16 $$
+
+
+Bởi vì $D(0,0) < 0$ nên nó $(0,0)$ là \textbf{điểm yên ngựa}, $D(1,1) = 128 > 0$ và $f_{xx}(1,1)=12 > 0$ nên $(1,1)$ là \textbf{cực tiểu tự do}, $D(-1,-1) = 128 > 0$ và $f_{xx}(-1,-1) = 12 > 0$ nên $(-1,-1)$ cũng là một \textbf{cực tiểu tự do của hàm số}.
+
+
+\qed

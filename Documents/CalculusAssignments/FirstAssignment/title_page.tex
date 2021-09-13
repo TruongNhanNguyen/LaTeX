@@ -1,0 +1,370 @@
+\section{Tích phân kép và tích phân bội ba}
+    \subsection{Tích phân kép}
+    
+        \begin{prob}
+            \recprob{28} Tính tích phân kép $\displaystyle\iint\limits_{\mathbf{R}}(x-3y^2)\mathrm{d}A$ với miền $\mathbf{R}=\left\{(x,y)\,| \,0\leqslant x \leqslant 2, 1 \leqslant y \leqslant 2\right\}$ 
+        \end{prob}
+        
+        \solution
+        
+        Theo định lí \textbf{Fubini}, ta có:
+        
+        $$ \displaystyle\iint\limits_{\mathbf{R}}(x-3y^2)\mathrm{d}A = \int_{1}^{2}\int_{0}^{2}(x-3y^2)\mathrm{d}x\mathrm{d}y
+           = \int_{1}^{2}\left.\left(\dfrac{x^2}{2}-3y^2x\right)\right|_{x=0}^{x=2} \mathrm{d}y = \int_{1}^{2}(2-6y^2)\mathrm{d}y=\left.\left(2y-2y^3\right)\right|_1^2=-12$$
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{29} Tính thể tích của vật thể rắn được bao bởi mặt elliptic paraboloid $x^2+2y^2+z=16$, các mặt phẳng $x=2$, $y=2$ và ba mặt phẳng tọa độ.
+        \end{prob}
+        
+        Vật rắn nằm trên miền phẳng hình chữ nhật $R=[0,2]\times[0,2]$ và dưới mặt  elliptic paraboloid $z=16-x^2-2y^2$, thể tích vật rắn chính là tích phân kép của $z=f(x,y)$ trên miền $R$, theo định lí \textbf{Fubini} ta có:
+        
+        
+        \begin{align*}
+            V&= \iint\limits_{R}(16-x^2-2y^2)\mathrm{d}A = \int_0^2\int_0^2(16-x^2-2y^2)\mathrm{d}x\mathrm{d}y  \\
+              &=\int_0^2\left.\left(16x-\dfrac{x^3}{3}-2y^2x\right)\right|_{x=0}^{x=2}\mathrm{d}y\\
+              &= \int_0^2\left(\dfrac{88}{3}-4y^2\right)\mathrm{d}y=\left[\dfrac{88}{3}y-\dfrac{4}{3}y^3\right]_0^2=48
+        \end{align*}
+        
+        
+        \solution
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{30} Tính tích phân kép sau $\displaystyle\iint\limits_{D}(x+2y)\mathrm{d}A$ với $D$ là miền được bao bởi các parabol $y=2x^2$ và $y=1+x^2$.
+        \end{prob}
+        
+        \solution
+        
+        Hai parabol cắt nhau khi $2x^2=1+x^2$, hay $x^2=1$, vậy $x=\pm 1$, bằng hình vẽ ta có được $D$ là miền phẳng loại $I$, và $D$ là miền chứa các điểm $(x,y)$ như sau: 
+        
+        $$D=\left\{(x,y)\;|\; -1 \leqslant x \leqslant 1,\; 2x^2 \leqslant y \leqslant 1+x^2\right\} $$
+        
+        Theo định lí \textbf{Fubini} ta có: 
+        
+        \begin{align*}
+            \displaystyle\iint\limits_{D}(x+2y)\mathrm{d}A &= \int_{-1}^1\int_{2x^2}^{1+x^2}(x+2y)\mathrm{d}y\mathrm{d}x\\
+               &= \int_{-1}^1\left[xy+y^2\right]_{y=2x^2}^{y=1+x^2}\mathrm{d}x\\
+               &= \int_{-1}^1[x(1+x^2)+(1+x^2)^2-x(2x^2)-(2x^2)^2]\mathrm{d}x\\
+               &= \int_{-1}^1(-3x^4-x^3+2x^2+x+1)\mathrm{d}x\\
+               &= \left.-3\dfrac{x^5}{5}-\dfrac{x^4}{4}+\dfrac{2}{3}x^3+\dfrac{x^2}{2}+x\right]_{-1}^1=\dfrac{32}{15}
+        \end{align*}
+        \qed
+        
+        \begin{prob}
+            \recprob{31} Tính thể tích vật thể rắn nằm phía dưới paraboloid $z=x^2+y^2$ và nằm trên miền $D$ nằm trong mặt phẳng $Oxy$ và được giới hạn bởi đường thẳng $y=2x$ và parabol $y=x^2$.
+        \end{prob}
+        
+        \solution
+        
+        Ta có hai cách giải cho bài toán này:
+        
+        \begin{itemize}
+            \item Xem $D$ là miền phẳng loại $I$
+            
+                  Khi đó: $D=\left\{(x,y)\;|\;0\leqslant x\leqslant2,\;x^2\leqslant y\leqslant 2x\right\}$
+                  
+                  Theo định lí \textbf{Fubini}, thể tích vật rắn là:
+                  
+                  \begin{align*}
+                      V &= \iint\limits_{D} (x^2+y^2) \mathrm{d}A = \int_0^2\int_{x^2}^{2x}(x^2+y^2)\mathrm{d}y\mathrm{d}x  \\
+                        &= \int_0^2\left[x^2y+\dfrac{y^3}{3}\right]_{y=x^2}^{y=2x}\mathrm{d}x\\
+                        &=\int_0^2\left[x^2(2x)+\dfrac{(2x)^3}{3}-x^2x^2-\dfrac{(x^2)^3}{3}\right]\mathrm{d}x\\
+                        &= \int_0^2\left(-\dfrac{x^6}{3}-x^4+\dfrac{14x^3}{3}\right)\mathrm{d}x\\
+                        &=\left.-\dfrac{x^7}{21}-\dfrac{x^5}{5}+\dfrac{7x^4}{6}\right]_0^2\\
+                        &= \dfrac{216}{35}
+                  \end{align*}
+            \item Xem $D$ là miền phẳng loại $II$
+            
+            Khi đó: $D=\left\{(x,y)\;|\;0\leqslant y\leqslant 4,\;\dfrac{y}{2}\leqslant x\leqslant \sqrt{y}\right\}$
+            
+            Cách tính khác cho $V$ là:
+            
+            \begin{align*}
+                V &= \iint\limits_{D} (x^2+y^2) \mathrm{d}A = \int_0^4\int_{\frac{y}{2}}^{\sqrt{y}}(x^2+y^2)\mathrm{d}x\mathrm{d}y\\
+                 &= \int_0^2\left[\dfrac{x^3}{3}+xy^2\right]_{\frac{y}{2}}^{\sqrt{y}} = \int_0^4\left(\dfrac{y^{3/2}}{3}+y^{5/2}-\dfrac{y^3}{24}-\dfrac{y^3}{2}\right)\mathrm{d}y\\
+                 &=\left.\dfrac{2}{15}y^{5/2}+\dfrac{2}{7}y^{7/2}-\dfrac{13}{96}y^4\right]_{y=0}^{y=4}=\dfrac{216}{35}
+            \end{align*}
+            
+        \end{itemize}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{32} Tính thể tích hình tứ diện giới hạn bởi các mặt phẳng $x+2y+z=2$ , $x=2y$, $x=0$  và $z=0$.
+        \end{prob}
+        
+        \solution
+        
+        $T$ là hình tứ diện bao bởi các mặt phẳng tọa độ $x=0$, $z=0$, mặt phẳng thẳng đứng $x=2y$ và mặt phẳng $x+2y+z=2$, giao điểm giữa mặt phẳng $xy$ và mặt phẳng $x+2y+z=2$ (khi $z=0$) là đường thẳng $x+2y=2$. Vậy $T$ nằm trên miền $D$ thuộc mặt phẳng $xy$ giới hạn bởi các đường thẳng $x=2y, x+2y=2$ và $x= 0$. Khi đó:
+        
+        $$ D=\left\{(x,y)\;|\;0\leqslant x\leqslant 1\;,\;\frac{x}{2}\leqslant y\leqslant 1-\frac{x}{2}\right\} $$
+        
+        Theo định lí \textbf{Fubini}, thể tích $V$ của vật rắn là:
+        
+        \begin{align*}
+           V &= \iint\limits_{D}z(x,y)\mathrm{d}A = \iint\limits_{D}(2-x-2y)\mathrm{d}A\\
+             &= \int_0^1\int_{\frac{x}{2}}^{1-\frac{x}{2}}(2-x-2y)\mathrm{d}y\mathrm{d}x\\
+             &= \int_0^1\left[2y-xy-y^2\right]_{\frac{x}{2}}^{1-\frac{x}{2}}\mathrm{d}x\\
+             &= \int_0^1\left[(2-x)-x\left(1-\dfrac{x}{2}\right)-\left(1-\dfrac{x}{2}\right)^2-x+\dfrac{x^2}{2}+\dfrac{x^2}{4}\right]\mathrm{d}x\\
+             &= \int_0^1(x^2-2x+1)\mathrm{d}x=\dfrac{1}{3}
+        \end{align*}
+        
+        \qed
+        
+        \textbf{Sử dụng hệ tọa độ cực.}
+        
+        \begin{prob}
+            \recprob{33} Tính tích phân kép sau: $\displaystyle\int\limits_{-1}^{1}\int\limits_{0}^{\sqrt{1-x^2}}(x^2+y^2)\mathrm{d}y\mathrm{d}x$
+        \end{prob}
+        
+        \solution
+        
+        Tích phân kép này được lấy trên miền $D$ là một nửa đường tròn tâm $O$ nằm trên trục hoành, bán kính $R=1$.
+        
+        $$D=\left\{(x,y)\;|\;-1\leqslant x \leqslant 1\;,\;0\leqslant y \leqslant\sqrt{1-x^2}\right\} $$
+        
+        Ta đưa $D$ về biểu diễn dưới dạng tọa độ cực:
+        
+        $$D=\left\{(r,\theta)\;|\;0\leqslant r \leqslant 1\;,\;0\leqslant \theta \leqslant\pi\right\}  $$
+        
+        Khi đó, chúng ta có:
+        
+        \begin{align*}
+            \int\limits_{-1}^{1}\int\limits_{0}^{\sqrt{1-x^2}}(x^2+y^2)\mathrm{d}y\mathrm{d}x &=\int_{0}^{\pi}\int_0^1(r^2)r\mathrm{d}r\mathrm{d}\theta \\
+            &= \int_0^\pi \left[\dfrac{r^4}{4}\right]_0^1\mathrm{d}\theta = \int_0^\pi\mathrm{d}\theta=\dfrac{\pi}{4}
+        \end{align*}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{34} Tìm thể tích vật rắn giới hạn bởi mặt phẳng $z=0$ và mặt paraboloid $z=1-x^2-y^2$.
+        \end{prob}
+        
+        \solution
+        
+        Nếu cho $z=0$, ta nhận thấy rằng mặt paraboloid $z=1-x^2-y^2$ cắt mặt phẳng $xy$ theo thiết diện là hình tròn $(D)$ $x^2+y^2 \leqslant 1$. Điều này có nghĩa là vật rắn sẽ nằm trên miền $D$ và nằm dưới mặt paraboloid  $z=1-x^2-y^2$. Trong hệ tọa độ cực, miền $D$ được biểu diễn dưới dạng: $\left\{(r,\theta)\;|\;0\leqslant r \leqslant 1\;,\;0\leqslant \theta \leqslant 2\pi\right\}$ . Bởi vì $z=1-x^2-y^2= 1-r^2$, nên thể tích vật rắn là:
+        
+        \begin{align*}
+            V &= \iint\limits_{D}(1-x^2-y^2)\mathrm{d}A = \int_0^{2\pi}\int_0^1(1-r^2)r\mathrm{d}r\mathrm{d}\theta\\
+              &= \int_0^{2\pi}\mathrm{d}\theta\int_{0}^{1}(r-r^3)\mathrm{d}r\\
+              &= 2\pi\left[\dfrac{r^2}{2}-\dfrac{r^4}{4}\right]_0^1=\dfrac{\pi}{2}
+        \end{align*}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{35} Tính thể tích vật rắn nằm phía dưới mặt paraboloid $x=x^2+y^2$, phía trên mặt phẳng $xy$ và bên trong mặt trụ $x^2+y^2=2x$.
+        \end{prob}
+        
+        \solution
+        
+        Vật rắn nằm phía trên miền phẳng $D$, với $D$ được bao bởi một đường tròn có phương trình $x^2+y^2=2x$ hay $$(x-1)^2+y^2=1$$
+        
+        Trong hệ tọa độ cực ta có $x^2+y^2= r^2$ và $x=r\cos{\theta}$, vì vậy miền $x^2+y^2=2x$ trở thành $r^2=2r\cos{\theta}$ hay $r=2\cos{\theta}$. Suy ra, biểu diễn của miền $D$ trong hệ tọa độ cực là:
+        
+        $$\left\{(r,\theta)\;|\; -\dfrac{\pi}{2}\leqslant\theta\leqslant\dfrac{\pi}{2}\;,\; 0\leqslant r \leqslant 2\cos{\theta}\right\} $$
+        
+        Theo định lí \textbf{Fubini},
+        
+        \begin{align*}
+            V &= \iint\limits_{D}(x^2+y^2)\mathrm{d}A = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\int_0^{2\cos{\theta}}(r^2)r\mathrm{d}r\mathrm{d}\theta = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left[\dfrac{r^4}{4}\right]_0^{2\cos{\theta}}\mathrm{d}r\\
+              &= 4\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^4\theta = 8\int_{0}^{\frac{\pi}{2}}\cos^4\theta\mathrm{d}\theta = 8\int_{0}^{\frac{\pi}{2}}\left(\dfrac{1+\cos 2\theta}{2}\right)^2\mathrm{d}\theta\\
+              &= 2\int_{0}^{\frac{\pi}{2}}\left[1+2\cos 2\theta+\dfrac{1}{2}(1+\cos4\theta)\right]\mathrm{d}\theta\\
+              &= 2\left[\dfrac{3}{2}\theta+\sin{2\theta}+\dfrac{1}{8}\sin{4\theta}\right]_0^{\frac{\pi}{2}} = \dfrac{3\pi}{2}
+        \end{align*}
+        
+        
+        \qed
+        
+    
+    \subsection{Tích phân bội ba}
+    
+        \begin{prob}
+            \recprob{36} Tính $\displaystyle\iiint\limits_{E}\sqrt{x^2+z^2}\mathrm{d}V$ với $E$ là miền khối được bao bởi mặt paraboloid $y = x^2+z^2$ và mặt phẳng $y=4$
+        \end{prob}
+        
+        \solution
+        
+        Lầy hình chiếu của miền $E$ trên mặt phẳng $xz$ được hình chiếu là miền $D$ có dạng hình tròn $x^2+y^4 \leqslant 4$. Khi đó tích phân được đơn giản hóa thành:
+        
+        $$\iiint\limits_{E} \sqrt{x^2+z^2}\mathrm{d}V =\iint\limits_{D}\left[\int_{x^2+z^2}^{4}\sqrt{x^2+z^2}\mathrm{d}y\right]=\iint\limits_{D}(4-x^2-z^2)\sqrt{x^2+z^2}\mathrm{d}A$$
+        
+        Chuyển $D$ trong hệ tọa độ cực ta được: 
+         $$ D=\left\{(r,\theta)\;|\;0\leqslant r \leqslant 2\;,\; 0\leqslant \theta \leqslant 2\pi\right\}$$
+         
+         Tích phân đã cho trở thành: 
+         
+         \begin{align*}
+             \iiint\limits_{E} \sqrt{x^2+z^2}\mathrm{d}V &=\iint\limits_{D}\left[\int_{x^2+z^2}^{4}\sqrt{x^2+z^2}\mathrm{d}y\right]=\iint\limits_{D}(4-x^2-z^2)\sqrt{x^2+z^2}\mathrm{d}A\\
+             &=\int_0^{2\pi}\int_0^2(4-r^2)rr\mathrm{d}r\mathrm{d}\theta =\int_0^{2\pi}\mathrm{d}\theta\int_0^2(4r^2-r^4)\mathrm{d}r\\
+             &= 2\pi\left[\dfrac{4r^3}{3}-\dfrac{r^5}{5}\right]_0^2 = \dfrac{128\pi}{5}
+         \end{align*}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{37} Tính thể tích hình tứ diện giới hạn bởi các mặt phẳng $x+2y+z=2$ , $x=2y$, $x=0$  và $z=0$.
+        \end{prob}
+        
+        \solution
+        
+        Thể tích tứ diện $T$ là tích phân bội ba lấy trên miền $E$ xác định như sau:
+        
+        $$E=\left\{(x,y,z)\;|\;0\leqslant x\leqslant 1\;,\;\dfrac{x}{2}\leqslant y\leqslant 1-\dfrac{x}{2}\;,\; 0 \leqslant z \leqslant 2-x-2y  \right\} $$
+        
+        Theo định lí \textbf{Fubini}:
+        
+        \begin{align*}
+            V(E) &= \int_0^1\int_{\frac{x}{2}}^{1-\frac{x}{2}}\int_0^{2-x-2y}\mathrm{d}z\mathrm{d}y\mathrm{d}x \\
+                 &= \int_0^1\int_{\frac{x}{2}}^{1-\frac{x}{2}}(2-x-2y)\mathrm{d}y\mathrm{d}x = \dfrac{1}{3}\qquad \text{(Kết quả lấy từ \recprob{32})}
+        \end{align*}
+        
+        \qed
+        
+        \textbf{Sử dụng hệ tọa độ trụ.}
+        
+        \begin{prob} 
+            \recprob{38}  Tính $\displaystyle\iiint\limits_{E}x^2\mathrm{d}V$ với $E$ là miền khối nằm dưới mặt paraboloid $z=4-x^2-y^2$ và trên mặt phẳng $xy$.
+        \end{prob}
+        
+        \solution
+        
+        Do miền $E$ đối xứng qua trục $Oz$ nên ta sẽ dùng hệ tọa độ trụ, hơn nữa việc sử dụng hệ tọa độ trụ là lựa chọn hợp lí bởi $z=4-(x^2+y^2) = 4-r^2$. Mặt paraboloid giao với mặt phẳng $xy$ tại đường tròn có $r^2=4$ hay $r =2$ vì vậy hình chiếu của $E$ trên mặt $xy$ là hình tròn $r \leqslant 2$. 
+        
+        Miền $E$ được xác định bởi: 
+        
+        $$ E=\left\{(r, \theta, z)\;|\; 0\leqslant r \leqslant 2\;,\; 0 \leqslant \theta \leqslant 2\pi\;,\; 0 \leqslant z \leqslant 4-r^2\right\} $$
+        
+        Tích phân đã cho viết lại như sau:
+        
+        \begin{align*}
+            \iiint\limits_{E}x^2\mathrm{d}V &= \int_0^{2\pi}\int_0^2\int_0^{4-r^2}(r\cos{\theta})^2r\mathrm{d}z\mathrm{d}r\mathrm{d}\theta\\
+                &= \int_0^{2\pi}\int_0^2(r^3\cos^2\theta)[4-r^2]\mathrm{d}r\mathrm{d}\theta\\
+                &= \int_0^{2\pi}\cos^2\theta\mathrm{d}\theta\int_0^2(4r^3-r^5)\mathrm{d}r\\
+                &= \dfrac{1}{2}\left[\theta+\dfrac{1}{2}\sin{2\theta}\right]_0^{2\pi} \left[r^4-\dfrac{r^6}{6}\right]_0^2\\
+                &= \dfrac{16\pi}{3}
+        \end{align*}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{39} Tính tích phân bội ba sau: $\displaystyle\int_{-2}^{2}\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\int_{\sqrt{x^2+y^2}}^{2}(x^2+y^2)\mathrm{d}z\mathrm{d}y\mathrm{d}x$ .
+        \end{prob} 
+        
+        \solution
+        
+        Đây là tích phân lặp của tích phân bội ba trên miền $E$ xác định bởi: 
+        $$E= \left\{(x,y,z)\;|\; -2\leqslant x\leqslant 2\;,\; -\sqrt{4-y^2} \leqslant y\leqslant \sqrt{4-y^2}\;,\; \sqrt{x^2+y^2}\leqslant z\leqslant2\right\} $$  Và hình chiếu của nó trên mặt phẳng $xy$ là đĩa tròn $x^2+y^2\leqslant 4$. Bề mặt phía bên dưới của $E$ là mặt nón $z=\sqrt{x^2+y^2}$ và bề mặt phía trên của nó là $z=2$. $E$ có một cách biểu diễn đơn giản hơn trong hệ tọa độ trụ là:
+        
+        $$E= \left\{(r, \theta, z)\;|\; 0\leqslant \theta \leqslant 2\pi\;,\; 0\leqslant r \leqslant 2\;,\; r \leqslant z\leqslant 2\right\} $$
+        
+        Vì vậy chúng ta có: 
+        
+        \begin{align*}
+            \int_{-2}^{2}\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\int_{\sqrt{x^2+y^2}}^{2}(x^2+y^2)\mathrm{d}z\mathrm{d}y\mathrm{d}x 
+            &= \iiint\limits_{V}(x^2+y^2)\mathrm{d}v \\
+            &=\int_0^{2\pi}\int_0^2\int_r^2r^2r\mathrm{d}z\mathrm{d}r\mathrm{d}\theta\\
+            &=\int_0^{2\pi}\mathrm{d}\theta\int_0^2r^3(2-r)\mathrm{d}r\\
+            &=2\pi\left[\dfrac{1}{2}r^4-\dfrac{1}{5}r^5\right]_0^2 = \dfrac{16}{5}\pi
+        \end{align*}
+        
+        \qed
+        
+        \textbf{Sử dụng hệ tọa độ cầu}
+        
+        \begin{prob}
+            \recprob{40} Tính $\displaystyle\iiint\limits_{E}e^{(x^2+y^2+3^2)^{3/2}}\mathrm{d}V$ với $B$ là khối cầu đơn vị:
+             $$ B= \left\{(x,y,z)\;|\;x^2+y^2+z^2\leqslant 1\right\} $$ 
+        \end{prob}
+        
+        \solution
+        
+        Bởi vì $B$ là một khối cầu nên ta có thể biểu diễn nó dưới dạng tọa độ cầu $(\rho, \theta,\phi)$ như sau:
+        
+        $$B=\left\{(\rho, \theta, \phi)\;|\; 0\leqslant\rho\leqslant 1\;,\;0\leqslant\theta\leqslant 2\pi\;,\; 0\leqslant\phi\leqslant\pi\right\}$$
+        
+        Khi đó ta có:
+        
+        \begin{align*}
+            \iiint\limits_{E}e^{(x^2+y^2+3^2)^{3/2}}\mathrm{d}V &= \int_0^{\pi}\int_0^{2\pi}\int_0^1e^{{(\rho^2)}^\frac{3}{2}}\rho^2\sin{\phi}\mathrm{d}\rho\mathrm{d}\theta\mathrm{d}\phi\\
+             &= \int_0^{2\pi}\mathrm{d}\theta\int_0^{\pi}\sin{\phi}\mathrm{d}\phi\int_0^1\rho^2e^{{\rho}^3}\mathrm{d}\rho\\
+             &= 2\pi\left[-\cos{\phi}\right]_0^{\pi}\left[\dfrac{1}{3}e^{{\rho}^3}\right]_0^1 = \dfrac{4}{3}\pi(e-1)
+        \end{align*}
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{41} Tính thể tích vật rắn nằm phía trên mặt nón $z=\sqrt{x^2+y^2}$ và phía dưới mặt cầu $x^2+y^2+z^2 = z$. 
+        \end{prob}
+        
+        \solution
+        
+        Chú ý khối cầu đã cho có tâm là điểm $\left(0,0,\dfrac{1}{2}\right)$ và tọa độ cầu của nó được viết như sau:
+        
+        $$ \rho^2 = \rho\cos{\phi} \qquad \text{hay}\qquad \rho=\cos{\phi}$$ 
+        
+        Khi đó, công thức của mặt nón trong hệ tọa độ cầu là : 
+        
+        $$ \rho\cos\phi = \sqrt{\rho^2\sin^2\phi\cos^2\theta+\rho^2\sin^2\phi\sin^2\theta} = \rho\sin\phi$$
+        
+        Từ phương trình trên ta suy ra: $\sin\phi= \cos\phi \Leftrightarrow \phi=\dfrac{\pi}{4}$. Vậy biểu diễn của miền $E$ trong hệ tọa độ cầu là:
+        
+        $$E=\left\{(\rho, \theta, \phi)\;|\;0\leqslant\theta\leqslant 2\pi\;,\;0\leqslant\phi\leqslant\dfrac{\pi}{4}\;,\;0\leqslant\rho\leqslant\cos\phi\right\}  $$
+        
+        Khi đó thể tích của vật rắn là:
+        
+        \begin{align*}
+            V(E) &= \iiint_{E}\mathrm{d}V=\int_{0}^{2\pi}\int_{0}^{\frac{\pi}{4}}\int_{0}^{\cos\phi}\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta\\
+                 &= \int_0^{2\pi}\mathrm{d}\theta\int_0^{\frac{\pi}{4}}\sin\phi\left[\dfrac{\rho^3}{3}\right]_{\rho=0}^{\rho=\cos\phi}\mathrm{d}\phi\\
+                 &=\dfrac{2\pi}{4}\int_0^{\frac{\pi}{4}}\sin\phi\cos^3\phi\mathrm{d}\phi = \dfrac{2\pi}{4}\left[-\dfrac{\cos^4\phi}{4}\right]_0^{\frac{\pi}{4}} =\dfrac{\pi}{8}
+        \end{align*}
+        
+        \qed
+        
+        \textbf{Sử dụng phương pháp đổi biến tổng quát.}
+        
+        \begin{prob}
+            \recprob{42} Tính tích phân kép $\displaystyle\iint\limits_{R}e^{\frac{x+y}{x-y}}\mathrm{d}A$ với $R$ là miền phẳng có dạng hình bình hành giới hạn bởi các đỉnh $(1,0), (2,0), (0,-2)$ và $(0,-1)$.  
+        \end{prob}
+        
+        \solution
+        
+        Sử dụng phương pháp đổi biến tông quát, ta tạo phép biến dổi $T:\underset{(u,v)}{\mathbb{R}^2}\longmapsto\underset{(x,y)}{\mathbb{R}^2}  $ như sau: 
+        
+        $$ x+y=u\quad \text{và}\quad x-y = v \Leftrightarrow x=\dfrac{1}{2}(u+v) \quad \text{và}\quad y=\dfrac{1}{2}(u-v)$$
+        
+        Khi đó định thức \textbf{Jacobi} của $T$ là: 
+         $$\dfrac{\partial(x,y)}{\partial(u,v)}=
+         \begin{vmatrix}
+             \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v}\\[10pt]
+             \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
+         \end{vmatrix}=
+         \begin{vmatrix}
+             \dfrac{1}{2} & \phantom{-}\dfrac{1}{2} \\[10pt]
+             \dfrac{1}{2} & -\dfrac{1}{2} 
+         \end{vmatrix}= -\dfrac{1}{2}$$
+         
+         Để tìm miền $S$ trong mặt phẳng $uv$ tương ứng với miền $R$ trong mặt phẳng $xy$, ta sử dụng các cạnh của miền $R$ và quy tắc của phép biến đổi $T$:
+         
+         $$y=0\qquad x-y=2 \qquad x=0 \qquad x-y=1 $$
+         
+         Khi đó ảnh của các đường thẳng trên trong mặt phẳng $uv$ là:
+         
+         $$ u=v\qquad v=2 \qquad u= -v \qquad v=1 $$
+         
+         Vì vậy $S$ là một miền hình thang cân với các đỉnh là $(1,1)\;, (2,2)\;, (-2,2)\;, (-1,1)$ và được biểu diễn như sau:
+         
+         $$ S=\left\{(u,v)\;|\;1\leqslant v \leqslant  2\;,\; -v \leqslant u \leqslant v\right\} $$
+         
+         Theo định lí đổi biến tổng quát cho tích phân bội, ta có:
+         
+         \begin{align*}
+             \iint\limits_{R}e^{\frac{x+y}{x-y}}\mathrm{d}A &= \iint\limits_{S}e^{\frac{u}{v}}\left|\dfrac{\partial(x,y)}{\partial(u,v)}\right|\mathrm{d}u\mathrm{d}v\\
+             &= \int_1^2\int_{-v}^{v}\dfrac{1}{2}e^{\frac{u}{v}}\mathrm{d}u\mathrm{d}v=\dfrac{1}{2}\int_1^2\left[ve^{\frac{u}{v}}\right]_{u=-v}^{u=v}\mathrm{d}v\\
+             &= \dfrac{1}{2}\int_1^2(e-e^{-1})v\mathrm{d}v=\dfrac{3}{4}(e-e^{-1})
+         \end{align*}
+        
+        \qed

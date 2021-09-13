@@ -1,0 +1,286 @@
+\section{Dãy số và chuỗi số}
+    \subsection{Dãy số}
+     
+    \begin{prob}
+       \recprob{1} Khảo sát sự hội tụ của dãy số sau: $\{a_n\}=n^2e^{-n}$
+    \end{prob}
+    
+    \solution
+    
+    Xét hàm số $f(x)=x^2e^{-x}=\dfrac{x^2}{e^x}$ liên tục trên $\mathbb{R}$, khi đó mọi số hạng của dãy $\{a_n\}$ đều là có thể biểu diễn thành dạng $f(n)$. Do đó: $$\lim\limits_{x\to\infty}f(x)=\lim\{a_n\}$$
+    
+    Theo quy tắc \textbf{L'Hospital}, chúng ta tính được giới hạn của $f(x)$:
+    
+    $$\lim\limits_{x\to\infty}f(x)=\lim\limits_{x\to\infty}\dfrac{x^2}{e^x}=\lim\limits_{x\to\infty}\dfrac{2x}{e^x}=\lim\limits_{x\to\infty}\dfrac{2}{e^x}=0$$
+    
+    Vậy dãy $\{a_n\}$ hội tụ và  $\lim\{a_n\} = 0$.
+    \qed
+    
+    \begin{prob}
+       \recprob{2} Khảo sát sự hội tụ của dãy số sau: $\{a_n\}=\ln(n+1)-\ln(n)$
+    \end{prob}
+    
+    \solution
+    
+    Ta có: $$ \{a_n\} = \ln(n+1)-\ln(n) = \ln\left(\dfrac{n+1}{n}\right) = \ln\left(1+\dfrac{1}{n}\right) $$
+    
+    Do đó: $$\lim\{a_n\} = \lim\ln\left(1+\dfrac{1}{n}\right)=\ln\left[\lim\left(1+\dfrac{1}{n}\right)\right]=\ln(e)=1$$
+    
+    Vậy dãy $\{a_n\}$ hội tụ và $\lim\{a_n\}=1$.
+    
+    \qed
+    
+    \begin{prob}
+       \recprob{3} Khảo sát sự hội tụ của dãy số sau: $\{a_n\}=\dfrac{\cos^2n}{2^n}$
+    \end{prob}
+    
+    \solution
+    
+    $\forall n \in \mathbb{N^*}, 0 \leqslant \cos^2n \leqslant 1$, nên $0 \leqslant \{a_n\}\leqslant \dfrac{1}{2^n}$. Mặt khác ta nhận thấy giới hạn $\lim\dfrac{1}{2^n} = 0$ nên theo nguyên lí kẹp $\lim\{a_n\} = 0$.
+    
+    \qed
+    
+    \begin{prob}
+       \recprob{4} Khảo sát sự hội tụ của dãy số sau: $\{a_n\}=2^{-n}\cos n\pi$
+    \end{prob}
+    
+    \solution
+    
+    Ta có: $|\{a_n\}| = \left|\dfrac{\cos(n\pi)}{2^n}\right| = \dfrac{|\cos(n\pi)|}{2^n} \Rightarrow 0\leqslant \{a_n\} \leqslant \dfrac{1}{2^n}$.
+    
+    Áp dụng nguyên lí kẹp ta được $\lim|\{a_n\}| = 0 \Rightarrow \lim\{a_n\} = 0$.
+    
+    \qed
+    
+    \begin{prob}
+       \recprob{5} Khảo sát sự hội tụ của dãy số sau: $\{a_n\}=\arctan(\ln n)$
+    \end{prob}
+    
+    \solution
+    
+    Xét hàm số $f(x) = \arctan(\ln x)$, ta có: $\lim\limits_{x\to\infty}f(x) = \dfrac{\pi}{2}$. Do vậy, $\{a_n\}$  hội tụ về $\dfrac{\pi}{2}$.
+    
+    \qed
+    
+    \begin{prob}
+       \recprob{6} Tìm giới hạn của dãy số sau: $$\left\{\sqrt{2}, \sqrt{2\sqrt{2}},\sqrt{2\sqrt{2\sqrt{2}}}, \ldots\right\}$$
+    \end{prob}
+    
+    \solution
+    
+    Số hạng tổng quát của dãy $\{a_n\}$ là: $$ \{a_n\} = 2^{\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\cdots+\frac{1}{2^n}} = 2^{\sum\limits_{n=1}^{\infty}\frac{1}{2^n}} = 2^{S_n} $$.
+    
+    Suy ra: $\lim\{a_n\} = \lim 2^{S_n} = 2^{\lim S_n}$.
+    
+    Mặt khác: $S_n$ là tổng của cấp số nhân lùi vô hạng $\{u_n\}$ với $u_1=\dfrac{1}2{}$ và công bội $q=\dfrac{1}{2} \Rightarrow S_n = \dfrac{1}{2}\cdot\dfrac{1}{1-\dfrac{1}{2}} = 1$.
+    
+    Vậy $\lim\{a_n\} = 2$.
+    
+    \qed
+    
+    \begin{prob}
+       \recprob{7} Cho dãy số $\{a_n\}$ được xác định bởi: $a_1=\sqrt{2}$ và $a_{n+1}=\sqrt{2+a_n}$. Tìm giới hạn của dãy số $\{a_n\}$
+       
+    \end{prob}
+    
+    \solution
+    
+    Ta nhận thấy: $$a_1=\sqrt{2}=2\cos\dfrac{\pi}{2^2} \text{ và } a_2 = \sqrt{2+a_1} =\sqrt{2\left(1+\cos\dfrac{\pi}{2^2}\right)} = 2\cos\dfrac{\pi}{2^3} $$
+    
+    Giả sử $a_n = 2\cos\dfrac{\pi}{2^{n+1}}, \forall n = 1, 2, 3, \ldots$, ta sẽ chứng minh $a_{n+1}=2\cos\dfrac{\pi}{2^{n+2}}$.
+    
+    Thật vậy, thay $a_n$ vào công thức truy hồi và sử dụng công thức hạ bậc $1+\cos\alpha=2\cos^2\left(\dfrac{\alpha}{2}\right)$, ta được:
+    
+    $$a_{n+1} = \sqrt{2+a_n} = \sqrt{2\left(1+\cos{\dfrac{\pi}{2^{n+1}}}\right)} = 2\cos\dfrac{\pi}{2^{n+2}} $$.
+    
+    Hay $a_n = 2\cos\dfrac{\pi}{2^{n+1}}, \forall n \in\mathbb{N^*}$.
+    
+    Do đó $\lim \{a_n\} = 2$
+    
+    
+    
+    
+    
+    \qed
+    
+    
+    \subsection{Chuỗi số}
+        \subsubsection{Khảo sát sự hội tụ của chuỗi số}
+        
+        \textbf{Sử dụng tiêu chuẩn tích phân - Integral Test.}
+            
+        \begin{prob}
+            \recprob{8} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=2}^{\infty}\dfrac{\ln{n}}{n}$
+        \end{prob}
+    
+        \solution
+        
+        Ta có: $\dfrac{\ln n}{n} \geqslant\dfrac{1}{n},\quad \forall n \geqslant 3$, và $\displaystyle\int\limits_{1}^{\infty}\dfrac{1}{x}\mathrm{d}x$ phân kỳ (bởi nó là tích phân \textit{Riemann} với $\alpha=1$) do đó theo \textbf{Tiêu chuẩn so sánh} chuỗi $\displaystyle\sum\limits_{n=2}^{\infty}\dfrac{\ln{n}}{n}$ phân kỳ.
+    
+        \qed
+        
+        \begin{prob}
+            \recprob{9} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{k=1}^{\infty}ke^{-k^2}$
+        \end{prob}
+    
+        \solution
+        
+        Xét hàm số $f(x) = \dfrac{x}{e^{x^{2}}}$, khi đó $f(x)$ là một hàm liên tục và nghịch biến  trên $[1;\infty)$, bởi:
+        
+        $$ f^\prime(x) = \dfrac{(1-2x^2)e^x}{e^{2x^2}} \leqslant 0, \, \forall x \in [1;\infty)$$
+        
+        Mặt khác, ta có: $$\int\limits_{1}^{\infty}\dfrac{x}{e^{x^{2}}} = \left.\dfrac{1}{2e^{x^{2}}}\right|_1^\infty = \dfrac{1}{2e}$$.
+        
+        Theo tiêu chuẩn tích phân, chuỗi đã cho hội tụ.
+        
+        \qed
+        
+        \textbf{Sử dụng tiêu chuẩn so sánh - Comparision Test.}
+        
+        \begin{prob}
+            \recprob{10} Khảo sát sự hội tụ của chuối số sau: $\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{5}{2n^2+4n+3}$
+        \end{prob}
+        
+        \solution
+        
+        Ta có: $\dfrac{5}{2n^2+4n+3}\leqslant\dfrac{5}{2n^2}$, mặt khác: $\displaystyle\sum\limits_{n=1}^\infty\dfrac{1}{n^2}$ là chuỗi \textbf{Riemann} với $\alpha=2 > 1$ nên nó hội tụ, và theo tiêu chuẩn so sánh thì chuỗi đã cho cũng hội tụ theo.
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{11} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{k=1}^{\infty}\dfrac{\ln{k}}{k}$
+        \end{prob}
+        
+        \solution
+        
+        Lời giải tương tụ như \recprob{8}.
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{12} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{1}{2^n-1}$
+        \end{prob}
+        
+        \solution 
+        
+        Đặt  $\displaystyle\sum\limits_{n=1}^{\infty}a_n=\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{1}{2^n-1}$ và $\displaystyle\sum\limits_{n=1}^{\infty}b_n = \displaystyle\sum\limits_{n=1}^{\infty} \dfrac{1}{2^n}$
+        
+        Theo tiêu chuẩn so sánh giới hạn - Limit comparision test:
+        
+        $$ \lim\dfrac{a_n}{b_n} = \lim\dfrac{2^n}{2^n-1} = 1 > 0$$
+        
+        và như ta đã biết $\displaystyle\sum\limits_{n=1}^{\infty}b_n = \displaystyle\sum\limits_{n=1}^{\infty} \dfrac{1}{2^n}$ là chuỗi hình học với $r=\dfrac{1}{2} < 1$, hay nói cách khác thì nó hội tụ.
+        
+        Do vậy, chuỗi đã cho cũng hội tụ theo.
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{13} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{2n^2+3n}{\sqrt{5+n^5}}$
+        \end{prob}
+        
+        \solution
+        
+        Ta đặt $\displaystyle\sum\limits_{n=1}^{\infty}a_n=\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{2n^2+3n}{\sqrt{5+n^5}}$ và $\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{2}{\sqrt{n}}=\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{2n^2}{n^{\frac{5}{2}}}$.
+        
+        Ta có:  $$ \lim\dfrac{a_n}{b_n} = \lim\dfrac{2n^2+3n}{\sqrt{5+n^5}}\cdot\dfrac{n^{\frac{5}{2}}}{2n^2} = \lim\dfrac{2n^{\frac{5}{2}}+3n^{\frac{3}{2}}}{2\sqrt{5+n^5}} = 1 $$.
+        
+        Và $\displaystyle\int\limits_{1}^\infty\dfrac{1}{\sqrt{n}}$ phân kỳ (nó là tích phân \textit{Riemann} với $\alpha=\dfrac{1}{2} < 1$)
+        
+        Do vậy theo \textbf{tiêu chuẩn so sánh giới hạn} chuỗi đã cho phân kỳ.
+        
+        \qed
+        
+        \textbf{Sử dụng tiêu chuẩn đan dấu và hội tụ tuyệt đối - Alternating series and Absolute Convergence.}
+        
+        \begin{prob}
+            \recprob{14} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=0}^{\infty}\dfrac{(-1)^n}{n!}$
+        \end{prob}
+        
+        \solution
+        
+        Đặt $b_n = n!$, chuỗi đã cho viết lại thành  $\displaystyle\sum\limits_{n=0}^{\infty}(-1)^n b_n$ hội tụ theo \textbf{Tiêu chuẩn đan dấu}. Bởi $b_{n+1} < b_n$ và $\lim b_n = 0.$
+        \qed
+        
+        \begin{prob}
+            \recprob{15} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=0}^{\infty}\dfrac{\cos n}{n^2}$
+        \end{prob}
+        
+        \solution
+        
+        \qed
+        
+        Đặt $b_n = \dfrac{\cos{n}}{n^2}$, khi đó $ |b_n| \leqslant \dfrac{1}{n^2}$. Mặt khác:  $\displaystyle\sum\limits_{n=0}^{\infty}\dfrac{1}{n^2}$ hội tụ nên chuỗi $\displaystyle\sum\limits_{n=0}^{\infty}|b_n|$ hội tụ (theo \textbf{Tiêu chuẩn so sánh}).
+        
+        Theo \textbf{Tiêu chuẩn hội tụ tuyệt đối}, thì chuỗi $\displaystyle\sum\limits_{n=0}^{\infty}b_n$ cũng hội tụ.
+        
+        
+        \textbf{Sử dụng tiêu chuẩn tỉ lệ và tiêu chuẩn căn thức - Ratio Test and Root Test.}
+        
+        \begin{prob}
+            \recprob{16} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=1}^{\infty}\dfrac{n^n}{n!}$
+        \end{prob}
+        
+        \solution
+        
+        Đặt $a_n = \dfrac{n^n}{n!}$, áp dụng \textbf{Tiêu chuẩn tỉ lệ} ta có:
+        
+        $$\lim\left|\dfrac{a_{n+1}}{a_n}\right|=\lim\left|\dfrac{n^{n+1}}{(n+1)!}\cdot\dfrac{n!}{n^n}\right|=\lim\left|\dfrac{n}{n+1}\right|= 0 < 1$$
+        
+        dãy đã cho hội tụ.
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{17} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=1}^{\infty}\left(\dfrac{2n+3}{3n+2}\right)^n$
+        \end{prob}
+        
+        \solution
+        
+        Đặt $b_n = \left(\dfrac{2n+3}{3n+2}\right)^n$, theo \textbf{Tiêu chuẩn căn thức} ta có:
+        
+        $$ \lim\sqrt{|b_n|} = \lim\left(\dfrac{2n+3}{3n+2}\right)=\lim\left(1-\dfrac{n-1}{3n+2}\right) = \dfrac{2}{3} < 1$$
+        
+        Vậy chuỗi đã cho hội tụ.
+        
+        \qed
+        
+        \begin{prob}
+            \recprob{18} Khảo sát sự hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=1}^{\infty} \left(\dfrac{n}{n+1}\right)^n$
+        \end{prob}
+        
+        \solution
+        
+        Ta có: $$\lim\left(\dfrac{n}{n+1}\right)^n=\lim\dfrac{1}{\left(1+\dfrac{1}{n}\right)^n} = \dfrac{1}{e} \neq 0$$
+        Do đó chuỗi đã cho phân kỳ.
+        
+        \qed
+         
+         \subsubsection{Tìm bán kính hội tụ của chuỗi số}
+         
+         \begin{prob}
+             \recprob{19} Tìm bán kính hội tụ và miền hội tụ của chuỗi số sau: $\displaystyle\sum\limits_{n=0}^{\infty}\dfrac{(-3)^nx^n}{\sqrt{n+1}}$
+         \end{prob}
+         
+         \solution
+         
+         Đặt $a_n = \dfrac{(-3)^n x^n}{\sqrt{n+1}}$, khi đó:
+         
+         \begin{align*}
+             \left|\dfrac{a_{n+1}}{a_n}\right| &= \left|\dfrac{(-3)^{n+1} x^{n+1}}{\sqrt{n+2}}\cdot\dfrac{\sqrt{n+1}}{(-3)^n x^n}\right|                                    = \left|-3x\sqrt{\dfrac{n+2}{n+1}}\right|\\
+                                               &= 3\sqrt{\dfrac{1+\frac{2}{n}}{1+\frac{1}{n}}}|x| \to 3|x| \quad \text{khi } n\to\infty
+         \end{align*}
+         
+         Theo \textbf{Tiêu chuẩn tỉ lệ}, chuỗi đã cho hội tụ khi $3|x| < 1 $ hay $x\in\left(\frac{-1}{3},\frac{1}{3}\right)$, suy ra bán kính hội tụ là $R=\dfrac{1}{3}$.
+         
+         Bây giờ ta khảo sát sự hội tụ của chuỗi tại các biên:
+         
+         \begin{itemize}
+             \item   với $x=-\frac{1}{3}$ thì chuỗi trở thành $ \displaystyle\sum\limits_{n=0}^{\infty}\frac{(-3)^n\left(-\frac{1}{3}\right)^n}{\sqrt{n+1}} = \displaystyle\sum\limits_{n=0}^{\infty}\frac{1}{\sqrt{n+1}} = \displaystyle\sum\limits_{n=1}^{\infty}\dfrac{1}{\sqrt{n}}$ là một chuỗi phân kỳ (bởi nó là chuỗi \textit{Riemann} với $\alpha=\frac{1}{2} < 1$).
+             \item với $x=\frac{1}{3}$ thì chuỗi trở thành $ \displaystyle\sum\limits_{n=0}^{\infty}\frac{(-3)^n\left(\frac{1}{3}\right)^n}{\sqrt{n+1}} = \displaystyle\sum\limits_{n=0}^{\infty}\frac{(-1)^n}{\sqrt{n+1}}$ hội tụ theo \textbf{Tiêu chuẩn đan dấu}.
+         \end{itemize}
+         
+         Vậy miền hội tụ của chuỗi là $\left(-\frac{1}{3},\frac{1}{3}\right]$
+         
+         \qed
+         
