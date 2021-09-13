@@ -1,0 +1,22 @@
+\usepackage[utf8]{vietnam}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, mathtools, amssymb, amsfonts, eucal}
+%\usepackage{mathptmx}
+%\usepackage{charter}
+\usepackage{mathpazo}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[version=4]{mhchem}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\pagenum}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\recprob}[2]{\tikz[baseline, anchor=base]{\node[draw=none, fill=teal, text=white, inner sep=3pt, rectangle, rounded corners]{\textbf{Câu #1} $\color{white}\blacktriangleright$ }}\,\textit{(#2 điểm)}\,}
+\newcommand{\pagenum}{\tikz[baseline, anchor=base]{\node[draw=none, fill=teal, text=white, inner sep=0.75pt, circle]{\bfseries\thepage}}}
+
+\setlength{\parindent}{0pt}
